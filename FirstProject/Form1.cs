@@ -16,9 +16,19 @@ namespace FirstProject
 {
     public partial class Form1 : Form
     {
+        Graphics g;
+        int x;
+        int y;
+        bool move;
+        Pen pen;
         public Form1()
         {
             InitializeComponent();
+            g = panel1.CreateGraphics();
+            x = -1;
+            y = -1;
+            move = false;
+            pen = new Pen(Color.Black, 5);
         }
 
         FigureList pts = new FigureList();
@@ -44,6 +54,30 @@ namespace FirstProject
                     formatter.Serialize(stream, pts);
                 }
             }
+        }
+
+        private void panel1_MouseUp(object sender, MouseEventArgs e)
+        {
+            move = false;
+            x = -1;
+            y = -1;
+        }
+
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (move == true && x != -1 && y != -1)
+            {
+                g.DrawLine(pen, new Point(x, y), e.Location);
+                x = e.X;
+                y = e.Y;
+            }
+        }
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            move = true;
+            x = e.X;
+            y = e.Y;
         }
     }
 }
