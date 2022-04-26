@@ -79,5 +79,11 @@ namespace FirstProject
             x = e.X;
             y = e.Y;
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            PictureBox p = (PictureBox)sender;
+            pen.Color = pictureBox3.BackColor;
+        }
     }
 }
