@@ -25,10 +25,12 @@ namespace FirstProject
         {
             InitializeComponent();
             g = panel1.CreateGraphics();
+            g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
             x = -1;
             y = -1;
             move = false;
-            pen = new Pen(Color.Black, 5);
+            pen = new Pen(Color.Black, 10);
+            pen.StartCap = pen.EndCap = System.Drawing.Drawing2D.LineCap.Round;
         }
 
         FigureList pts = new FigureList();
@@ -84,6 +86,24 @@ namespace FirstProject
         {
             PictureBox p = (PictureBox)sender;
             pen.Color = pictureBox3.BackColor;
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            PictureBox p = (PictureBox)sender;
+            pen.Color = pictureBox2.BackColor;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            PictureBox p = (PictureBox)sender;
+            pen.Color = pictureBox1.BackColor;
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            PictureBox p = (PictureBox)sender;
+            pen.Color = pictureBox4.BackColor;
         }
     }
 }

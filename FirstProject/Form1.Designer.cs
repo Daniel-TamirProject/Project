@@ -81,6 +81,7 @@ namespace FirstProject
             this.pictureBox1.Size = new System.Drawing.Size(31, 28);
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox2
             // 
@@ -90,6 +91,7 @@ namespace FirstProject
             this.pictureBox2.Size = new System.Drawing.Size(31, 28);
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox3
             // 
@@ -109,6 +111,7 @@ namespace FirstProject
             this.pictureBox4.Size = new System.Drawing.Size(31, 28);
             this.pictureBox4.TabIndex = 6;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // Form1
             // 
