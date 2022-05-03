@@ -48,7 +48,7 @@
             // 
             this.button1.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.button1.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(341, 234);
+            this.button1.Location = new System.Drawing.Point(336, 283);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(96, 37);
             this.button1.TabIndex = 1;

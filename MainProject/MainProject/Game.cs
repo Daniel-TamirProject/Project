@@ -15,6 +15,12 @@ namespace MainProject
         public Game()
         {
             InitializeComponent();
+            //this.WindowState = FormWindowState.Maximized;
+        }
+
+        private void Game_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -15,12 +15,21 @@ namespace MainProject
         public HomePage()
         {
             InitializeComponent();
+            
+            //this.WindowState = FormWindowState.Maximized;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Game next = new Game();
-            next.ShowDialog();
+            //this.Close();
+            //Application.Exit();
+            //Game next = new Game();
+            //next.ShowDialog();
+            this.Hide();
+            Game form2 = new Game();
+            //form2.Closed += (s, args) => this.Close();
+            form2.ShowDialog();
+            this.Close();
         }
     }
 }

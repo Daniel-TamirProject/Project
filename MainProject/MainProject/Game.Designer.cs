@@ -54,6 +54,7 @@ namespace MainProject
             this.Controls.Add(this.button1);
             this.Name = "Game";
             this.Text = "Game";
+            this.Load += new System.EventHandler(this.Game_Load);
             this.ResumeLayout(false);
 
         }
