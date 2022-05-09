@@ -41,7 +41,12 @@ namespace MainProject
 
         private void panel2_MouseClick(object sender, MouseEventArgs e)
         {
-            button2.Visible = true;
+            //PictureBox cow = new PictureBox();
+            PictureBox cow = pictureBox1;
+            cow.Visible = true;
+            //cow.BackgroundImage = "C:\Users\danie\Documents\GitHub\Project\MainProject\MainProject\Resources\cow2.jpg";
+            //cow.BackgroundImage = Image.FromFile(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal)
+            //    + @"C:\Users\danie\Documents\GitHub\Project\MainProject\MainProject\Resources\cow2.jpg");
         }
 
         private void panel4_MouseClick(object sender, MouseEventArgs e)
@@ -52,6 +57,11 @@ namespace MainProject
         private void panel6_MouseClick(object sender, MouseEventArgs e)
         {
             button7.Visible = true;
+        }
+
+        private void panel8_MouseClick(object sender, MouseEventArgs e)
+        {
+
         }
     }
 }
