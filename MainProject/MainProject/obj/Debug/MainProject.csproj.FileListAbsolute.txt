@@ -9,14 +9,3 @@ C:\Users\danie\Documents\GitHub\Project\MainProject\MainProject\obj\Debug\MainPr
 C:\Users\danie\Documents\GitHub\Project\MainProject\MainProject\obj\Debug\MainProject.pdb
 C:\Users\danie\Documents\GitHub\Project\MainProject\MainProject\obj\Debug\MainProject.HomePage.resources
 C:\Users\danie\Documents\GitHub\Project\MainProject\MainProject\obj\Debug\MainProject.Game.resources
-C:\Users\Tamir\Documents\GitHub\Project\MainProject\MainProject\bin\Debug\MainProject.exe.config
-C:\Users\Tamir\Documents\GitHub\Project\MainProject\MainProject\bin\Debug\MainProject.exe
-C:\Users\Tamir\Documents\GitHub\Project\MainProject\MainProject\bin\Debug\MainProject.pdb
-C:\Users\Tamir\Documents\GitHub\Project\MainProject\MainProject\obj\Debug\MainProject.csproj.AssemblyReference.cache
-C:\Users\Tamir\Documents\GitHub\Project\MainProject\MainProject\obj\Debug\MainProject.HomePage.resources
-C:\Users\Tamir\Documents\GitHub\Project\MainProject\MainProject\obj\Debug\MainProject.Game.resources
-C:\Users\Tamir\Documents\GitHub\Project\MainProject\MainProject\obj\Debug\MainProject.Properties.Resources.resources
-C:\Users\Tamir\Documents\GitHub\Project\MainProject\MainProject\obj\Debug\MainProject.csproj.GenerateResource.cache
-C:\Users\Tamir\Documents\GitHub\Project\MainProject\MainProject\obj\Debug\MainProject.csproj.CoreCompileInputs.cache
-C:\Users\Tamir\Documents\GitHub\Project\MainProject\MainProject\obj\Debug\MainProject.exe
-C:\Users\Tamir\Documents\GitHub\Project\MainProject\MainProject\obj\Debug\MainProject.pdb
