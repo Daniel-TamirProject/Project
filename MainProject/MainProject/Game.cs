@@ -38,5 +38,20 @@ namespace MainProject
         {
             button1.Visible = true;
         }
+
+        private void panel2_MouseClick(object sender, MouseEventArgs e)
+        {
+            button2.Visible = true;
+        }
+
+        private void panel4_MouseClick(object sender, MouseEventArgs e)
+        {
+            button5.Visible = true;
+        }
+
+        private void panel6_MouseClick(object sender, MouseEventArgs e)
+        {
+            button7.Visible = true;
+        }
     }
 }
