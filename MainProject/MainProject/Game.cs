@@ -44,6 +44,7 @@ namespace MainProject
             //PictureBox cow = new PictureBox();
             PictureBox cow = pictureBox1;
             cow.Visible = true;
+            //cow.Location = New point(e.Location.X, e.Location.Y);
             //cow.BackgroundImage = "C:\Users\danie\Documents\GitHub\Project\MainProject\MainProject\Resources\cow2.jpg";
             //cow.BackgroundImage = Image.FromFile(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal)
             //    + @"C:\Users\danie\Documents\GitHub\Project\MainProject\MainProject\Resources\cow2.jpg");
