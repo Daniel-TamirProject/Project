@@ -29,6 +29,7 @@ namespace MainProject
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Game));
             this.backgroundpanel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.counter = new System.Windows.Forms.Label();
@@ -46,10 +47,10 @@ namespace MainProject
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::MainProject.Properties.Resources.cow2;
-            this.pictureBox1.Location = new System.Drawing.Point(1008, 504);
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(986, 504);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(47, 38);
+            this.pictureBox1.Size = new System.Drawing.Size(69, 45);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
