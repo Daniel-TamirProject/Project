@@ -57,25 +57,31 @@ namespace MainProject
 
                 counter.Text = "num:" + items.Count();
             }
-            else
+            else if (e.Button == MouseButtons.Right)
             {
-                backgroundpanel.Controls.Remove(picture1);
+                for (int i = 0; i < items.Count(); i++)
+                {
+                    if (items[i].Location == picture1.Location)
+                    {
+                        items[i].Visible = false;
+                    }
+                }
+                
             }
-            
+            //backgroundpanel.Controls.Remove(picture1);
         }
 
         private void Picture1_Click(object sender, EventArgs e)
         {
-            int i = 0;
-            while(i < items.Count())
-            {
-                if (items[i].Name == this.Name)
-                {
-                    items[i].Dispose();
-                    backgroundpanel.Controls.Remove(this);
-                }
-            }
-            throw new NotImplementedException();
+            //items[0].Visible = false;
+            //for (int i = 0; i < items.Count(); i++)
+            //{
+            //    if (items[i].Location == this.Location)
+            //    {
+            //        items[i].Visible = false;
+            //    }
+            //}
+            //throw new NotImplementedException();
         }
 
         private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
