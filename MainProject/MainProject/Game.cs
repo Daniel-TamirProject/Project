@@ -32,14 +32,11 @@ namespace MainProject
             //test.Image = MainProject.Properties.Resources.cow2;
             //test.Visible = true;
             //test.Location = new Point(14, 17);
+            PictureBox picture1 = new PictureBox();
 
-            if (e.Button == MouseButtons.Right)
+            if (e.Button == MouseButtons.Left)
             {
-                
-            }
-            else
-            {
-                PictureBox picture1 = new PictureBox();
+                //PictureBox picture1 = new PictureBox();
 
                 picture1.Name = "cow";
                 picture1.Width = 50;
@@ -60,13 +57,25 @@ namespace MainProject
 
                 counter.Text = "num:" + items.Count();
             }
+            else
+            {
+                backgroundpanel.Controls.Remove(picture1);
+            }
             
         }
 
         private void Picture1_Click(object sender, EventArgs e)
         {
-
-            //throw new NotImplementedException();
+            int i = 0;
+            while(i < items.Count())
+            {
+                if (items[i].Name == this.Name)
+                {
+                    items[i].Dispose();
+                    backgroundpanel.Controls.Remove(this);
+                }
+            }
+            throw new NotImplementedException();
         }
 
         private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
