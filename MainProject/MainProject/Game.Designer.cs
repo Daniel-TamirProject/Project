@@ -31,6 +31,8 @@ namespace MainProject
         {
             this.backgroundpanel = new System.Windows.Forms.Panel();
             this.counter = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // backgroundpanel
@@ -51,6 +53,18 @@ namespace MainProject
             this.counter.TabIndex = 2;
             this.counter.Text = "count :";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::MainProject.Properties.Resources.cow2_removebg_preview;
+            this.pictureBox1.Location = new System.Drawing.Point(999, 504);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(47, 39);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -58,12 +72,14 @@ namespace MainProject
             this.BackgroundImage = global::MainProject.Properties.Resources.grassBackground2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.counter);
             this.Controls.Add(this.backgroundpanel);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Game";
             this.Text = "Game";
             this.Load += new System.EventHandler(this.Game_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -73,5 +89,6 @@ namespace MainProject
 
         private System.Windows.Forms.Panel backgroundpanel;
         private System.Windows.Forms.Label counter;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

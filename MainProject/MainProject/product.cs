@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MainProject
 {
-    class @product
+    class product
     {
         public int type;
     }
