@@ -38,16 +38,18 @@ namespace MainProject
             // backgroundpanel
             // 
             this.backgroundpanel.BackColor = System.Drawing.Color.Transparent;
+            this.backgroundpanel.BackgroundImage = global::MainProject.Properties.Resources.grassBackground2;
+            this.backgroundpanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.backgroundpanel.Location = new System.Drawing.Point(3, 3);
             this.backgroundpanel.Name = "backgroundpanel";
-            this.backgroundpanel.Size = new System.Drawing.Size(1061, 495);
+            this.backgroundpanel.Size = new System.Drawing.Size(973, 485);
             this.backgroundpanel.TabIndex = 0;
             this.backgroundpanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.backgroundpanel_MouseClick);
             // 
             // counter
             // 
             this.counter.AutoSize = true;
-            this.counter.Location = new System.Drawing.Point(791, 524);
+            this.counter.Location = new System.Drawing.Point(27, 516);
             this.counter.Name = "counter";
             this.counter.Size = new System.Drawing.Size(51, 17);
             this.counter.TabIndex = 2;
@@ -57,7 +59,7 @@ namespace MainProject
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::MainProject.Properties.Resources.cow2_removebg_preview;
-            this.pictureBox1.Location = new System.Drawing.Point(999, 504);
+            this.pictureBox1.Location = new System.Drawing.Point(999, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(47, 39);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -69,7 +71,7 @@ namespace MainProject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::MainProject.Properties.Resources.grassBackground2;
+            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.pictureBox1);
