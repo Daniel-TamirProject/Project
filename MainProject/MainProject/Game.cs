@@ -59,13 +59,14 @@ namespace MainProject
             }
             else if (e.Button == MouseButtons.Right)
             {
-                for (int i = 0; i < items.Count(); i++)
-                {
-                    if (items[i].Location == picture1.Location)
-                    {
-                        items[i].Visible = false;
-                    }
-                }
+                //for (int i = 0; i < items.Count(); i++)
+                //{
+                //    if (items[i].Location == picture1.Location)
+                //    {
+                //        items[i].Visible = false;
+                //    }
+                //}
+                items[0].Visible = false;
                 
             }
             //backgroundpanel.Controls.Remove(picture1);
@@ -82,6 +83,7 @@ namespace MainProject
             //    }
             //}
             //throw new NotImplementedException();
+            items[0].Visible = false;
         }
 
         private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
