@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace MainProject
 {
-    class Cow
+    class Cow:Animal
     {
+        public static int numberOfCow;
+
     }
 }

@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace MainProject
 {
-    class Cow
+    class Animal:Product
     {
+        
+        public int breed; //{ 1 = Cow, 2 = Chicken }
+        public String name;
+        public static int numberOfAnimal;
+        
     }
 }
