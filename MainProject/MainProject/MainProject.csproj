@@ -8,10 +8,11 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>MainProject</RootNamespace>
     <AssemblyName>MainProject</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -46,6 +47,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Animal.cs" />
+    <Compile Include="Cow.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,6 +61,7 @@
     <Compile Include="Game.Designer.cs">
       <DependentUpon>Game.cs</DependentUpon>
     </Compile>
+    <Compile Include="Product.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -91,6 +95,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\grassBackground2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cow2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cow2-removebg-preview.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
