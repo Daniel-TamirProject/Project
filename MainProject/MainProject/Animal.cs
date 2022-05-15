@@ -15,7 +15,6 @@ namespace MainProject
         public int breed; //{ 1 = Cow, 2 = Chicken }
         public String name;
         public static int numberOfAnimal;
-
         public PictureBox photo;
 
         //public Animal(int bre, string na)
