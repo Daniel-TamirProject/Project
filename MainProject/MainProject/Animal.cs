@@ -7,8 +7,7 @@ using System.Threading.Tasks;
 namespace MainProject
 {
     class Animal
-    {
-        
+    {   
         public int breed; //{ 1 = Cow, 2 = Chicken }
         public String name;
         public static int numberOfAnimal;
