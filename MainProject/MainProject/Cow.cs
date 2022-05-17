@@ -14,5 +14,14 @@ namespace MainProject
     {
         public static int numberOfCow;
 
+
+        public static void creatCow()
+        {
+
+        }
+
     }
+
+
+    
 }
