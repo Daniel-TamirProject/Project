@@ -12,5 +12,6 @@ namespace MainProject
     class product
     {
         public int type;
+
     }
 }

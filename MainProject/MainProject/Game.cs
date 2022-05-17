@@ -66,7 +66,7 @@ namespace MainProject
                 //        items[i].Visible = false;
                 //    }
                 //}
-                items[0].Visible = false;
+                items[0].Dispose();
                 
             }
             //backgroundpanel.Controls.Remove(picture1);
