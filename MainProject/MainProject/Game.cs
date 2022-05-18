@@ -83,7 +83,7 @@ namespace MainProject
             //    }
             //}
             //throw new NotImplementedException();
-            items[0].Visible = false;
+            //items[0].Visible = false;
         }
 
         private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
