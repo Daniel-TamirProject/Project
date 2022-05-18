@@ -26,7 +26,7 @@ namespace MainProject
         public product(int typ,int id)
         {
             numOfProduct = id;
-            type = 0;
+            type = typ;
             lifeTime.Start();
         }
         public int Type

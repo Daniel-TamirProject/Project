@@ -16,9 +16,37 @@ namespace MainProject
         //public static int numberOfAnimal;
         public int id;
 
-        public Animal(int bre) : base()
+        public Animal()//defult cons
+        {
+            breed = 0;
+        }
+        public Animal(int bre,int id) : base(1,id)
         {
             breed = bre;
+        }
+
+        public int Breed
+        {
+            get
+            {
+                return breed;
+            }
+            set
+            {
+                breed = value;
+            }
+        }
+
+        public int Id
+        {
+            get
+            {
+                return id;
+            }
+            set
+            {
+                id = value;
+            }
         }
     }
 }

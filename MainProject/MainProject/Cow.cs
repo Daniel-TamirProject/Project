@@ -15,7 +15,7 @@ namespace MainProject
         //public static int numberOfCow;
         public PictureBox photo;
 
-        public Cow() : base(1)
+        public Cow(int id) : base(1,id)
         {
             photo.Name = "cow";
             photo.Width = 50;
@@ -25,9 +25,10 @@ namespace MainProject
             photo.SizeMode = PictureBoxSizeMode.StretchImage;
             photo.Image = MainProject.Properties.Resources.cow2_removebg_preview;
         }
+
         public static void creatCow()
         {
-
+            
         }
 
     }
