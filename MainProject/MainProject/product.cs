@@ -20,6 +20,8 @@ namespace MainProject
         {
             numOfProduct = 0;
             type = 0;
+
+            lifeTime = new Timer();
             lifeTime.Start();
         }
 
@@ -40,6 +42,18 @@ namespace MainProject
             set
             {
                 type = value;
+            }
+        }
+
+        public int NumOfProduct
+        {
+            get
+            {
+                return numOfProduct;
+            }
+            set
+            {
+                numOfProduct = value;
             }
         }
 

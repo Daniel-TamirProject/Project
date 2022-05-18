@@ -16,7 +16,9 @@ namespace MainProject
         Random rand = new Random();
         //List<PictureBox> items = new List<PictureBox>();
         //SortedList items = new SortedList();
-        List<product> items = new List<product>();
+        List<Cow> items = new List<Cow>();
+        Cow newcow;
+
         public Game()
         {
             InitializeComponent();
@@ -33,48 +35,66 @@ namespace MainProject
         {
             //PictureBox picture1 = new PictureBox();
             int id = 0;
-            Cow newcow = new Cow(id);
+            newcow = new Cow(id);
 
             if (e.Button == MouseButtons.Left)
             {
                 int x = e.X - newcow.photo.Width / 2;
                 int y = e.Y - newcow.photo.Height / 2;
                 newcow.photo.Location = new Point(x, y);
+                Point test = new Point(x, y);
 
                 items.Add(newcow);
                 backgroundpanel.Controls.Add(newcow.photo);
 
                 id++;
 
+                //newcow.photo.Click += Picture1_Click;
+
                 counter.Text = "num:" + items.Count();
             }
             else if (e.Button == MouseButtons.Right)
             {
-                //for (int i = 0; i < items.Count(); i++)
-                //{
-                //    if (items[i].Location == picture1.Location)
-                //    {
-                //        items[i].Visible = false;
-                //    }
-                //}
-                //items[0].Dispose();
+                int x = e.X - newcow.photo.Width / 2;
+                int y = e.Y - newcow.photo.Height / 2;
+                Point test = new Point(x, y);
+
+                for (int i = 0; i < items.Count; i++)
+                {
+                    if (items[i].photo.Location == test)
+                    {
+                        newcow = items[i];
+                    }
+                }
+                if (items.Count > 0)
+                {
+                    newcow = items[0];
+                    items.Remove(newcow);
+                    backgroundpanel.Controls.Remove(newcow.photo);
+                    id--;
+                }
                 
+                counter.Text = "num:" + items.Count();
             }
             //backgroundpanel.Controls.Remove(picture1);
         }
 
         private void Picture1_Click(object sender, EventArgs e)
         {
-            //items[0].Visible = false;
-            //for (int i = 0; i < items.Count(); i++)
-            //{
-            //    if (items[i].Location == this.Location)
-            //    {
-            //        items[i].Visible = false;
-            //    }
-            //}
-            //throw new NotImplementedException();
-            //items[0].Visible = false;
+            if (items.Count > 0)
+            {
+                //for (int i = 0; i < items.Count; i++)
+                //{
+                //    if (items[i].photo.Location == )
+                //    {
+
+                //    }
+                //}
+                items.Remove(newcow);
+                backgroundpanel.Controls.Remove(newcow.photo);
+            }
+
+            counter.Text = "num:" + items.Count();
         }
 
         private void pictureBox1_MouseClick(object sender, MouseEventArgs e)

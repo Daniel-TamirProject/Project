@@ -28,10 +28,17 @@ namespace MainProject
             photo.Image = MainProject.Properties.Resources.cow2_removebg_preview;
         }
 
-        //public static void creatCow(int x, int y)
-        //{
-
-        //}
+        public PictureBox Photo
+        {
+            get
+            {
+                return photo;
+            }
+            set
+            {
+                photo = value;
+            }
+        }
 
     }
 
