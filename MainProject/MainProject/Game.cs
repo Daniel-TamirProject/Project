@@ -18,6 +18,8 @@ namespace MainProject
         //SortedList items = new SortedList();
         List<Cow> items = new List<Cow>();
         Cow newcow;
+        int id = 0;
+        int idtest = 0;
 
         public Game()
         {
@@ -34,7 +36,6 @@ namespace MainProject
         private void backgroundpanel_MouseClick(object sender, MouseEventArgs e)
         {
             //PictureBox picture1 = new PictureBox();
-            int id = 0;
             newcow = new Cow(id);
 
             if (e.Button == MouseButtons.Left)
@@ -49,23 +50,21 @@ namespace MainProject
 
                 id++;
 
-                //newcow.photo.Click += Picture1_Click;
+                //newcow.photo.Click += newcow.photo_Click;
+                idtest = newcow.photo_Click(sender, e);
 
                 counter.Text = "num:" + items.Count();
             }
             else if (e.Button == MouseButtons.Right)
             {
-                int x = e.X - newcow.photo.Width / 2;
-                int y = e.Y - newcow.photo.Height / 2;
-                Point test = new Point(x, y);
-
                 for (int i = 0; i < items.Count; i++)
                 {
-                    if (items[i].photo.Location == test)
+                    if (items[i].id == idtest)
                     {
                         newcow = items[i];
                     }
                 }
+
                 if (items.Count > 0)
                 {
                     newcow = items[0];
@@ -73,9 +72,13 @@ namespace MainProject
                     backgroundpanel.Controls.Remove(newcow.photo);
                     id--;
                 }
+
+
                 
                 counter.Text = "num:" + items.Count();
             }
+
+            //idtest = newcow.photo_Click(sender, e);
             //backgroundpanel.Controls.Remove(picture1);
         }
 

@@ -40,6 +40,14 @@ namespace MainProject
             }
         }
 
+        //internal void photo_Click(object sender, EventArgs e)
+        //{
+        //    throw new NotImplementedException();
+        //}
+        internal int photo_Click(object sender, EventArgs e)
+        {
+            return this.numOfProduct;
+        }
     }
 
 
