@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -13,7 +14,9 @@ namespace MainProject
     public partial class Game : Form
     {
         Random rand = new Random();
-        List<PictureBox> items = new List<PictureBox>();
+        //List<PictureBox> items = new List<PictureBox>();
+        //SortedList items = new SortedList();
+        List<product> items = new List<product>();
         public Game()
         {
             InitializeComponent();
@@ -28,32 +31,20 @@ namespace MainProject
 
         private void backgroundpanel_MouseClick(object sender, MouseEventArgs e)
         {
-            //PictureBox test = new PictureBox();
-            //test.Image = MainProject.Properties.Resources.cow2;
-            //test.Visible = true;
-            //test.Location = new Point(14, 17);
-            PictureBox picture1 = new PictureBox();
+            //PictureBox picture1 = new PictureBox();
+            int id = 0;
+            Cow newcow = new Cow(id);
 
             if (e.Button == MouseButtons.Left)
             {
-                //PictureBox picture1 = new PictureBox();
+                int x = e.X - newcow.photo.Width / 2;
+                int y = e.Y - newcow.photo.Height / 2;
+                newcow.photo.Location = new Point(x, y);
 
-                picture1.Name = "cow";
-                picture1.Width = 50;
-                picture1.Height = 50;
+                items.Add(newcow);
+                backgroundpanel.Controls.Add(newcow.photo);
 
-                int x = e.X - picture1.Width / 2;
-                int y = e.Y - picture1.Height / 2;
-
-                picture1.Location = new Point(x, y);
-                picture1.Image = MainProject.Properties.Resources.cow2_removebg_preview;
-                //picture1.Image = Image.FromFile(@"C:\Users\danie\Documents\GitHub\Project\MainProject\MainProject\Resources\cow2.jpg");
-                picture1.SizeMode = PictureBoxSizeMode.StretchImage;
-                picture1.Visible = true;
-
-                picture1.Click += Picture1_Click;
-                items.Add(picture1);
-                backgroundpanel.Controls.Add(picture1);
+                id++;
 
                 counter.Text = "num:" + items.Count();
             }
@@ -66,7 +57,7 @@ namespace MainProject
                 //        items[i].Visible = false;
                 //    }
                 //}
-                items[0].Visible = false;
+                //items[0].Dispose();
                 
             }
             //backgroundpanel.Controls.Remove(picture1);
@@ -83,7 +74,7 @@ namespace MainProject
             //    }
             //}
             //throw new NotImplementedException();
-            items[0].Visible = false;
+            //items[0].Visible = false;
         }
 
         private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
@@ -97,3 +88,37 @@ namespace MainProject
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//PictureBox picture1 = new PictureBox();
+
+//picture1.Name = "cow";
+//picture1.Width = 50;
+//picture1.Height = 50;
+
+//int x = e.X - picture1.Width / 2;
+//int y = e.Y - picture1.Height / 2;
+
+//picture1.Location = new Point(x, y);
+//picture1.Image = MainProject.Properties.Resources.cow2_removebg_preview;
+////picture1.Image = Image.FromFile(@"C:\Users\danie\Documents\GitHub\Project\MainProject\MainProject\Resources\cow2.jpg");
+//picture1.SizeMode = PictureBoxSizeMode.StretchImage;
+//picture1.Visible = true;
+
+//picture1.Click += Picture1_Click;
+//items.Add(picture1);
+//backgroundpanel.Controls.Add(picture1);
