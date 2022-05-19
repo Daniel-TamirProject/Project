@@ -69,11 +69,11 @@ namespace MainProject
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(751, 197);
+            this.label1.Location = new System.Drawing.Point(745, 197);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(32, 13);
+            this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 7;
-            this.label1.Text = "plans";
+            this.label1.Text = "plants";
             // 
             // treePic
             // 
