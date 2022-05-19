@@ -14,6 +14,7 @@ namespace MainProject
     {
         //public static int numberOfCow;
         public PictureBox photo;
+        public int x, y;
 
         public Cow(int id) : base(1,id)
         {
@@ -39,15 +40,43 @@ namespace MainProject
                 photo = value;
             }
         }
+        public int X
+        {
+            get
+            {
+                return x;
+            }
+            set
+            {
+                x = value;
+            }
+        }
+
+        public int Y
+        {
+            get
+            {
+                return y;
+            }
+            set
+            {
+                y = value;
+            }
+        }
+
+        public bool isInside(int xP, int yP)
+        {
+            return Math.Abs(xP - x) <= photo.Width / 2 && Math.Abs(yP - y) <= photo.Height / 2;
+        }
 
         //internal void photo_Click(object sender, EventArgs e)
         //{
         //    throw new NotImplementedException();
         //}
-        internal int photo_Click(object sender, EventArgs e)
-        {
-            return this.numOfProduct;
-        }
+        //internal int photo_Click(object sender, EventArgs e)
+        //{
+        //    return this.numOfProduct;
+        //}
     }
 
 

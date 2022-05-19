@@ -20,6 +20,8 @@ namespace MainProject
         Cow newcow;
         int id = 0;
         int idtest = 0;
+        int x;
+        int y;
 
         public Game()
         {
@@ -35,48 +37,49 @@ namespace MainProject
 
         private void backgroundpanel_MouseClick(object sender, MouseEventArgs e)
         {
-            //PictureBox picture1 = new PictureBox();
-            newcow = new Cow(id);
-
             if (e.Button == MouseButtons.Left)
             {
-                int x = e.X - newcow.photo.Width / 2;
-                int y = e.Y - newcow.photo.Height / 2;
+                newcow = new Cow(id);
+                x = e.X - newcow.photo.Width / 2;
+                y = e.Y - newcow.photo.Height / 2;
+                newcow.X = x;
+                newcow.Y = y;
                 newcow.photo.Location = new Point(x, y);
-                Point test = new Point(x, y);
 
                 items.Add(newcow);
                 backgroundpanel.Controls.Add(newcow.photo);
 
                 id++;
 
-                //newcow.photo.Click += newcow.photo_Click;
-                idtest = newcow.photo_Click(sender, e);
+
+                newcow.photo.Click += Picture1_Click;
+                //idtest = newcow.photo_Click(sender, e);
 
                 counter.Text = "num:" + items.Count();
             }
-            else if (e.Button == MouseButtons.Right)
-            {
-                for (int i = 0; i < items.Count; i++)
-                {
-                    if (items[i].id == idtest)
-                    {
-                        newcow = items[i];
-                    }
-                }
-
-                if (items.Count > 0)
-                {
-                    newcow = items[0];
-                    items.Remove(newcow);
-                    backgroundpanel.Controls.Remove(newcow.photo);
-                    id--;
-                }
+            //else if (e.Button == MouseButtons.Right)
+            //{
+                //for (int i = 0; i < items.Count; i++)
+                //{
+                //    if (items[i].id == idtest)
+                //    {
+                //        newcow = items[i];
+                //    }
+                //}
 
 
-                
-                counter.Text = "num:" + items.Count();
-            }
+                //if (items.Count > 0)
+                //{
+                //    newcow = items[0];
+                //    items.Remove(newcow);
+                //    backgroundpanel.Controls.Remove(newcow.photo);
+                //    id--;
+                //}
+
+
+
+                //counter.Text = "num:" + items.Count();
+            //}
 
             //idtest = newcow.photo_Click(sender, e);
             //backgroundpanel.Controls.Remove(picture1);
@@ -84,28 +87,39 @@ namespace MainProject
 
         private void Picture1_Click(object sender, EventArgs e)
         {
-            if (items.Count > 0)
-            {
-                //for (int i = 0; i < items.Count; i++)
-                //{
-                //    if (items[i].photo.Location == )
-                //    {
+            //if (items.Count > 0)
+            //{
+            //    //for (int i = 0; i < items.Count; i++)
+            //    //{
+            //    //    if (items[i].photo.Location == )
+            //    //    {
 
-                //    }
-                //}
-                items.Remove(newcow);
-                backgroundpanel.Controls.Remove(newcow.photo);
+            //    //    }
+            //    //}
+            //    items.Remove(newcow);
+            //    backgroundpanel.Controls.Remove(newcow.photo);
+            //}
+
+            for (int i = 0; i < items.Count; i++)
+            {
+                if (items[i].isInside(x, y))
+                {
+                    newcow = items[i];
+                    items.Remove(newcow);
+                    backgroundpanel.Controls.Remove(newcow.photo);
+                    id--;
+                }
             }
 
             counter.Text = "num:" + items.Count();
         }
 
-        private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
-            
+
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void adamaPic_Click(object sender, EventArgs e)
         {
 
         }
