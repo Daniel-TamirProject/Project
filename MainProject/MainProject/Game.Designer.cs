@@ -161,7 +161,7 @@ namespace MainProject
             this.backgroundpanel.Name = "backgroundpanel";
             this.backgroundpanel.Size = new System.Drawing.Size(730, 394);
             this.backgroundpanel.TabIndex = 0;
-            //this.backgroundpanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.backgroundpanel_MouseClick);
+            this.backgroundpanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.backgroundpanel_MouseClick);
             this.backgroundpanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.backgroundpanel_MouseDown);
             // 
             // Game
