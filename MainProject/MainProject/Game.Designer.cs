@@ -123,6 +123,7 @@ namespace MainProject
             this.shipPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.shipPic.TabIndex = 5;
             this.shipPic.TabStop = false;
+            this.shipPic.Click += new System.EventHandler(this.shipPic_Click);
             // 
             // DuckPic
             // 

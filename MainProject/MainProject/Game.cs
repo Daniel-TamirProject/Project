@@ -13,15 +13,17 @@ namespace MainProject
 {
     public partial class Game : Form
     {
-        Random rand = new Random();
         //List<PictureBox> items = new List<PictureBox>();
         //SortedList items = new SortedList();
-        List<Cow> items = new List<Cow>();
+        List<Cow> cows = new List<Cow>();
+        List<Ship> ships = new List<Ship>();
         Cow newcow;
+        Ship newship;
+
+
+        int flag, x, y;
         int id = 0;
-        int idtest = 0;
-        int x;
-        int y;
+        //int idtest = 0;
 
         public Game()
         {
@@ -39,47 +41,78 @@ namespace MainProject
         {
             if (e.Button == MouseButtons.Left)
             {
-                newcow = new Cow(id);
-                x = e.X - newcow.photo.Width / 2;
-                y = e.Y - newcow.photo.Height / 2;
-                newcow.X = x;
-                newcow.Y = y;
-                newcow.photo.Location = new Point(x, y);
+                switch (flag)
+                {
+                    case 1:
+                        newcow = new Cow(id, e.X, e.Y);
+                        cows.Add(newcow);
+                        backgroundpanel.Controls.Add(newcow.photo);
+                        break;
 
-                items.Add(newcow);
-                backgroundpanel.Controls.Add(newcow.photo);
+                    case 2:
+                        newship = new Ship(id, e.X, e.Y);
+                        ships.Add(newship);
+                        backgroundpanel.Controls.Add(newship.photo);
+                        break;
 
-                id++;
-
-
-                newcow.photo.Click += Picture1_Click;
-                //idtest = newcow.photo_Click(sender, e);
-
-                counter.Text = "num:" + items.Count();
+                }
+                    
             }
             else if (e.Button == MouseButtons.Right)
             {
-                //for (int i = 0; i < items.Count; i++)
-                //{
-                //    if (items[i].id == idtest)
-                //    {
-                //        newcow = items[i];
-                //    }
-                //}
 
-
-                if (items.Count > 0)
-                {
-                    newcow = items[0];
-                    items.Remove(newcow);
-                    backgroundpanel.Controls.Remove(newcow.photo);
-                    id--;
-                }
-
-
-
-                counter.Text = "num:" + items.Count();
             }
+
+
+
+
+            //if (e.Button == MouseButtons.Left)
+            //{
+
+
+
+
+            //    //newcow = new Cow(id);
+            //    //x = e.X - newcow.photo.Width / 2;
+            //    //y = e.Y - newcow.photo.Height / 2;
+            //    //newcow.X = x;
+            //    //newcow.Y = y;
+            //    //newcow.photo.Location = new Point(x, y);
+
+            //    //cows.Add(newcow);
+            //    //backgroundpanel.Controls.Add(newcow.photo);
+
+            //    //id++;
+
+
+            //    //newcow.photo.Click += Picture1_Click;
+            //    ////idtest = newcow.photo_Click(sender, e);
+
+            //    //counter.Text = "num:" + cows.Count();
+            //}
+            //else if (e.Button == MouseButtons.Right)
+            //{
+            //    //for (int i = 0; i < items.Count; i++)
+            //    //{
+            //    //    if (items[i].id == idtest)
+            //    //    {
+            //    //        newcow = items[i];
+            //    //    }
+            //    //}
+
+
+            //    //if (cows.Count > 0)
+            //    //{
+            //    //    newcow = cows[0];
+            //    //    cows.Remove(newcow);
+            //    //    backgroundpanel.Controls.Remove(newcow.photo);
+            //    //    id--;
+            //    //}
+
+
+
+            //    //counter.Text = "num:" + cows.Count();
+            //}
 
             //idtest = newcow.photo_Click(sender, e);
             //backgroundpanel.Controls.Remove(picture1);
@@ -100,25 +133,28 @@ namespace MainProject
             //    backgroundpanel.Controls.Remove(newcow.photo);
             //}
 
-            for (int i = 0; i < items.Count; i++)
+            for (int i = 0; i < cows.Count; i++)
             {
-                if (items[i].isInside(x, y))
+                if (cows[i].isInside(x, y))
                 {
-                    newcow = items[i];
-                    items.Remove(newcow);
+                    newcow = cows[i];
+                    cows.Remove(newcow);
                     backgroundpanel.Controls.Remove(newcow.photo);
                     id--;
                 }
             }
 
-            counter.Text = "num:" + items.Count();
+            counter.Text = "num:" + cows.Count();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-
+            flag = 1;
         }
-
+        private void shipPic_Click(object sender, EventArgs e)
+        {
+            flag = 2;
+        }
         private void adamaPic_Click(object sender, EventArgs e)
         {
 

@@ -8,27 +8,28 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace MainProject
 {
-    class Cow:Animal
+    class Ship : Animal
     {
         //public static int numberOfCow;
         public PictureBox photo;
         public int x, y;
 
-        public Cow(int id) : base(1,id)
+        public Ship(int id) : base(1, id)
         {
             photo = new PictureBox();
 
-            photo.Name = "cow";
+            photo.Name = "ship";
             photo.Width = 50;
             photo.Height = 50;
 
-            photo.Image = MainProject.Properties.Resources.cow2_removebg_preview;
+            photo.Image = MainProject.Properties.Resources.ship_removebg_preview;
             photo.SizeMode = PictureBoxSizeMode.StretchImage;
-            photo.Image = MainProject.Properties.Resources.cow2_removebg_preview;
         }
-        public Cow(int id,int Cx,int Cy) : base(1, id)
+
+        public Ship(int id, int Cx, int Cy) : base(1, id)
         {
             photo = new PictureBox();
 
@@ -36,9 +37,9 @@ namespace MainProject
             photo.Width = 50;
             photo.Height = 50;
 
-            photo.Image = MainProject.Properties.Resources.cow2_removebg_preview;
+            photo.Image = MainProject.Properties.Resources.ship_removebg_preview;
             photo.SizeMode = PictureBoxSizeMode.StretchImage;
-            photo.Image = MainProject.Properties.Resources.cow2_removebg_preview;
+            photo.Image = MainProject.Properties.Resources.ship_removebg_preview;
 
             x = Cx - photo.Width / 2;
             y = Cy - photo.Height / 2;
@@ -84,25 +85,5 @@ namespace MainProject
         {
             return Math.Abs(xP - x) <= photo.Width / 2 && Math.Abs(yP - y) <= photo.Height / 2;
         }
-        
-        public void CreatCow(int id,int Cx,int Cy)
-        {
-            x = Cx;
-            y = Cy;
-            photo.Location = new Point(x, y);
-        }
-
-
-        //internal void photo_Click(object sender, EventArgs e)
-        //{
-        //    throw new NotImplementedException();
-        //}
-        //internal int photo_Click(object sender, EventArgs e)
-        //{
-        //    return this.numOfProduct;
-        //}
     }
-
-
-    
 }
