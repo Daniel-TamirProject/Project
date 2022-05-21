@@ -57,8 +57,8 @@ namespace MainProject
 
                 counter.Text = "num:" + items.Count();
             }
-            //else if (e.Button == MouseButtons.Right)
-            //{
+            else if (e.Button == MouseButtons.Right)
+            {
                 //for (int i = 0; i < items.Count; i++)
                 //{
                 //    if (items[i].id == idtest)
@@ -68,18 +68,18 @@ namespace MainProject
                 //}
 
 
-                //if (items.Count > 0)
-                //{
-                //    newcow = items[0];
-                //    items.Remove(newcow);
-                //    backgroundpanel.Controls.Remove(newcow.photo);
-                //    id--;
-                //}
+                if (items.Count > 0)
+                {
+                    newcow = items[0];
+                    items.Remove(newcow);
+                    backgroundpanel.Controls.Remove(newcow.photo);
+                    id--;
+                }
 
 
 
-                //counter.Text = "num:" + items.Count();
-            //}
+                counter.Text = "num:" + items.Count();
+            }
 
             //idtest = newcow.photo_Click(sender, e);
             //backgroundpanel.Controls.Remove(picture1);
