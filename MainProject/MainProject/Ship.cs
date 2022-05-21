@@ -39,7 +39,6 @@ namespace MainProject
 
             photo.Image = MainProject.Properties.Resources.ship_removebg_preview;
             photo.SizeMode = PictureBoxSizeMode.StretchImage;
-            photo.Image = MainProject.Properties.Resources.ship_removebg_preview;
 
             x = Cx - photo.Width / 2;
             y = Cy - photo.Height / 2;

@@ -36,14 +36,14 @@ namespace MainProject
             this.grassPic = new System.Windows.Forms.PictureBox();
             this.adamaPic = new System.Windows.Forms.PictureBox();
             this.shipPic = new System.Windows.Forms.PictureBox();
-            this.DuckPic = new System.Windows.Forms.PictureBox();
+            this.ChickenPic = new System.Windows.Forms.PictureBox();
             this.CowPic = new System.Windows.Forms.PictureBox();
             this.backgroundpanel = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.treePic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grassPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.adamaPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.shipPic)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DuckPic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ChickenPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CowPic)).BeginInit();
             this.SuspendLayout();
             // 
@@ -125,17 +125,18 @@ namespace MainProject
             this.shipPic.TabStop = false;
             this.shipPic.Click += new System.EventHandler(this.shipPic_Click);
             // 
-            // DuckPic
+            // ChickenPic
             // 
-            this.DuckPic.BackColor = System.Drawing.Color.Transparent;
-            this.DuckPic.Image = global::MainProject.Properties.Resources.duck_removebg_preview;
-            this.DuckPic.Location = new System.Drawing.Point(742, 81);
-            this.DuckPic.Margin = new System.Windows.Forms.Padding(2);
-            this.DuckPic.Name = "DuckPic";
-            this.DuckPic.Size = new System.Drawing.Size(47, 42);
-            this.DuckPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.DuckPic.TabIndex = 4;
-            this.DuckPic.TabStop = false;
+            this.ChickenPic.BackColor = System.Drawing.Color.Transparent;
+            this.ChickenPic.Image = global::MainProject.Properties.Resources.chicken2_removebg_preview;
+            this.ChickenPic.Location = new System.Drawing.Point(742, 81);
+            this.ChickenPic.Margin = new System.Windows.Forms.Padding(2);
+            this.ChickenPic.Name = "ChickenPic";
+            this.ChickenPic.Size = new System.Drawing.Size(47, 42);
+            this.ChickenPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ChickenPic.TabIndex = 4;
+            this.ChickenPic.TabStop = false;
+            this.ChickenPic.Click += new System.EventHandler(this.ChickenPic_Click);
             // 
             // CowPic
             // 
@@ -160,7 +161,8 @@ namespace MainProject
             this.backgroundpanel.Name = "backgroundpanel";
             this.backgroundpanel.Size = new System.Drawing.Size(730, 394);
             this.backgroundpanel.TabIndex = 0;
-            this.backgroundpanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.backgroundpanel_MouseClick);
+            //this.backgroundpanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.backgroundpanel_MouseClick);
+            this.backgroundpanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.backgroundpanel_MouseDown);
             // 
             // Game
             // 
@@ -175,7 +177,7 @@ namespace MainProject
             this.Controls.Add(this.label1);
             this.Controls.Add(this.animal);
             this.Controls.Add(this.shipPic);
-            this.Controls.Add(this.DuckPic);
+            this.Controls.Add(this.ChickenPic);
             this.Controls.Add(this.CowPic);
             this.Controls.Add(this.counter);
             this.Controls.Add(this.backgroundpanel);
@@ -186,7 +188,7 @@ namespace MainProject
             ((System.ComponentModel.ISupportInitialize)(this.grassPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.adamaPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.shipPic)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DuckPic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ChickenPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CowPic)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -198,7 +200,7 @@ namespace MainProject
         private System.Windows.Forms.Panel backgroundpanel;
         private System.Windows.Forms.Label counter;
         private System.Windows.Forms.PictureBox CowPic;
-        private System.Windows.Forms.PictureBox DuckPic;
+        private System.Windows.Forms.PictureBox ChickenPic;
         private System.Windows.Forms.PictureBox shipPic;
         private System.Windows.Forms.Label animal;
         private System.Windows.Forms.Label label1;

@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Animal.cs" />
+    <Compile Include="Chicken.cs" />
     <Compile Include="Cow.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -126,6 +127,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\tree-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chicken2-removebg-preview.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -17,11 +17,13 @@ namespace MainProject
         //SortedList items = new SortedList();
         List<Cow> cows = new List<Cow>();
         List<Ship> ships = new List<Ship>();
+        List<Chicken> chickens = new List<Chicken>();
         Cow newcow;
         Ship newship;
+        Chicken newchicken;
 
 
-        int flag, x, y;
+        int flag, x, y, index;
         int id = 0;
         //int idtest = 0;
 
@@ -35,49 +37,100 @@ namespace MainProject
             
         }
 
-        private void backgroundpanel_MouseClick(object sender, MouseEventArgs e)
+        private void backgroundpanel_MouseDown(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left)
+            index = -1;
+            for (int i = 0; i < cows.Count; i++)
             {
-                switch (flag)
+                if (cows[i].isInside(e.X, e.Y))
                 {
-                    case 1:
-                        newcow = new Cow(id, e.X, e.Y);
-                        cows.Add(newcow);
-                        backgroundpanel.Controls.Add(newcow.photo);
-                        break;
-
-                    case 2:
-                        newship = new Ship(id, e.X, e.Y);
-                        ships.Add(newship);
-                        backgroundpanel.Controls.Add(newship.photo);
-                        break;
-
+                    index = i;
+                    string s = e.Button.ToString();
+                    if (s == "right")
+                    {
+                        newcow = cows[i];
+                        cows.Remove(newcow);
+                        backgroundpanel.Controls.Remove(newcow.photo);
+                        index = -1;
+                    }
                 }
-                    
+
+                if (index < 0)
+                {
+                    switch (flag)
+                    {
+                        case 1:
+                            newcow = new Cow(id, e.X, e.Y);
+                            cows.Add(newcow);
+                            backgroundpanel.Controls.Add(newcow.photo);
+                            break;
+
+                        case 2:
+                            newchicken = new Chicken(id, e.X, e.Y);
+                            chickens.Add(newchicken);
+                            backgroundpanel.Controls.Add(newchicken.photo);
+                            break;
+
+                        case 3:
+                            newship = new Ship(id, e.X, e.Y);
+                            ships.Add(newship);
+                            backgroundpanel.Controls.Add(newship.photo);
+                            break;
+
+                    }
+                }
             }
-            else if (e.Button == MouseButtons.Right)
-            {
-
-            }
-
-
-            //    //if (cows.Count > 0)
-            //    //{
-            //    //    newcow = cows[0];
-            //    //    cows.Remove(newcow);
-            //    //    backgroundpanel.Controls.Remove(newcow.photo);
-            //    //    id--;
-            //    //}
-
-
-
-            //    //counter.Text = "num:" + cows.Count();
-            //}
-
-            //idtest = newcow.photo_Click(sender, e);
-            //backgroundpanel.Controls.Remove(picture1);
         }
+
+        //private void backgroundpanel_MouseClick(object sender, MouseEventArgs e)
+        //{
+        //    if (e.Button == MouseButtons.Left)
+        //    {
+        //        switch (flag)
+        //        {
+        //            case 1:
+        //                newcow = new Cow(id, e.X, e.Y);
+        //                cows.Add(newcow);
+        //                backgroundpanel.Controls.Add(newcow.photo);
+        //                break;
+
+        //            case 2:
+        //                newchicken = new Chicken(id, e.X, e.Y);
+        //                chickens.Add(newchicken);
+        //                backgroundpanel.Controls.Add(newchicken.photo);
+        //                break;
+
+        //            case 3:
+        //                newship = new Ship(id, e.X, e.Y);
+        //                ships.Add(newship);
+        //                backgroundpanel.Controls.Add(newship.photo);
+        //                break;
+
+        //        }
+                    
+        //    }
+        //    else if (e.Button == MouseButtons.Right)
+        //    {
+
+        //    }
+
+
+        //    //    //if (cows.Count > 0)
+        //    //    //{
+        //    //    //    newcow = cows[0];
+        //    //    //    cows.Remove(newcow);
+        //    //    //    backgroundpanel.Controls.Remove(newcow.photo);
+        //    //    //    id--;
+        //    //    //}
+
+
+
+        //    //    //counter.Text = "num:" + cows.Count();
+        //    //}
+
+        //    //idtest = newcow.photo_Click(sender, e);
+        //    //backgroundpanel.Controls.Remove(picture1);
+        //}
 
         private void Picture1_Click(object sender, EventArgs e)
         {
@@ -112,9 +165,15 @@ namespace MainProject
         {
             flag = 1;
         }
-        private void shipPic_Click(object sender, EventArgs e)
+
+        private void ChickenPic_Click(object sender, EventArgs e)
         {
             flag = 2;
+        }
+
+        private void shipPic_Click(object sender, EventArgs e)
+        {
+            flag = 3;
         }
         private void adamaPic_Click(object sender, EventArgs e)
         {
