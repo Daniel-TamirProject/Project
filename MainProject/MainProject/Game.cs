@@ -28,8 +28,6 @@ namespace MainProject
         public Game()
         {
             InitializeComponent();
-            //this.WindowState = FormWindowState.Maximized;
-            //panel1.Visible = false;
         }
 
         private void Game_Load(object sender, EventArgs e)
@@ -62,43 +60,6 @@ namespace MainProject
             {
 
             }
-
-
-
-
-            //if (e.Button == MouseButtons.Left)
-            //{
-
-
-
-
-            //    //newcow = new Cow(id);
-            //    //x = e.X - newcow.photo.Width / 2;
-            //    //y = e.Y - newcow.photo.Height / 2;
-            //    //newcow.X = x;
-            //    //newcow.Y = y;
-            //    //newcow.photo.Location = new Point(x, y);
-
-            //    //cows.Add(newcow);
-            //    //backgroundpanel.Controls.Add(newcow.photo);
-
-            //    //id++;
-
-
-            //    //newcow.photo.Click += Picture1_Click;
-            //    ////idtest = newcow.photo_Click(sender, e);
-
-            //    //counter.Text = "num:" + cows.Count();
-            //}
-            //else if (e.Button == MouseButtons.Right)
-            //{
-            //    //for (int i = 0; i < items.Count; i++)
-            //    //{
-            //    //    if (items[i].id == idtest)
-            //    //    {
-            //    //        newcow = items[i];
-            //    //    }
-            //    //}
 
 
             //    //if (cows.Count > 0)
