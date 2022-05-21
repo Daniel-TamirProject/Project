@@ -184,6 +184,7 @@ namespace MainProject
             this.Name = "Game";
             this.Text = "Game";
             this.Load += new System.EventHandler(this.Game_Load);
+            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Game_MouseClick_1);
             ((System.ComponentModel.ISupportInitialize)(this.treePic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grassPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.adamaPic)).EndInit();

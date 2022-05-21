@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace MainProject
 {
-    class Animal : product
+    class Animal : Product
     {   
         public int breed; //{ 1 = Cow, 2 = Chicken }
         //public static int numberOfAnimal;
@@ -47,6 +47,10 @@ namespace MainProject
             {
                 id = value;
             }
+        }
+        public override bool isInside(int xP, int yP)
+        {
+            return true;
         }
     }
 }

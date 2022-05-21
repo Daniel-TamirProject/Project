@@ -14,31 +14,28 @@ namespace MainProject
     class Ship : Animal
     {
         //public static int numberOfCow;
-        public PictureBox photo;
+        //public PictureBox photo;
         public int x, y;
 
         public Ship(int id) : base(1, id)
         {
-            photo = new PictureBox();
+            //photo = new PictureBox();
 
             photo.Name = "ship";
-            photo.Width = 50;
-            photo.Height = 50;
+
 
             photo.Image = MainProject.Properties.Resources.ship_removebg_preview;
-            photo.SizeMode = PictureBoxSizeMode.StretchImage;
+
         }
 
         public Ship(int id, int Cx, int Cy) : base(1, id)
         {
-            photo = new PictureBox();
+            //photo = new PictureBox();
 
-            photo.Name = "cow";
-            photo.Width = 50;
-            photo.Height = 50;
+            photo.Name = "ship";
+
 
             photo.Image = MainProject.Properties.Resources.ship_removebg_preview;
-            photo.SizeMode = PictureBoxSizeMode.StretchImage;
 
             x = Cx - photo.Width / 2;
             y = Cy - photo.Height / 2;
@@ -80,7 +77,7 @@ namespace MainProject
             }
         }
 
-        public bool isInside(int xP, int yP)
+        public override bool isInside(int xP, int yP)
         {
             return Math.Abs(xP - x) <= photo.Width / 2 && Math.Abs(yP - y) <= photo.Height / 2;
         }

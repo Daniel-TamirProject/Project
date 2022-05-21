@@ -13,34 +13,28 @@ namespace MainProject
     class Cow:Animal
     {
         //public static int numberOfCow;
-        public PictureBox photo;
+        //public PictureBox photo;
         public int x, y;
 
         public Cow(int id) : base(1,id)
         {
-            photo = new PictureBox();
-
             photo.Name = "cow";
-            photo.Width = 50;
-            photo.Height = 50;
+
 
             photo.Image = MainProject.Properties.Resources.cow2_removebg_preview;
-            photo.SizeMode = PictureBoxSizeMode.StretchImage;
+
         }
         public Cow(int id,int Cx,int Cy) : base(1, id)
-        {
-            photo = new PictureBox();
-
+        {          
             photo.Name = "cow";
-            photo.Width = 50;
-            photo.Height = 50;
+
 
             photo.Image = MainProject.Properties.Resources.cow2_removebg_preview;
-            photo.SizeMode = PictureBoxSizeMode.StretchImage;
 
             x = Cx - photo.Width / 2;
             y = Cy - photo.Height / 2;
             photo.Location = new Point(x, y);
+            
         }
 
         public PictureBox Photo
@@ -78,7 +72,7 @@ namespace MainProject
             }
         }
 
-        public bool isInside(int xP, int yP)
+        public override bool isInside(int xP, int yP)
         {
             return Math.Abs(xP - x) <= photo.Width / 2 && Math.Abs(yP - y) <= photo.Height / 2;
         }
