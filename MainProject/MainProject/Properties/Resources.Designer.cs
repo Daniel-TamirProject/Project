@@ -63,6 +63,36 @@ namespace MainProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap adama_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("adama-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap adama_removebg_preview1 {
+            get {
+                object obj = ResourceManager.GetObject("adama-removebg-preview1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap chicken2_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("chicken2-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cow2 {
             get {
                 object obj = ResourceManager.GetObject("cow2", resourceCulture);
@@ -83,9 +113,69 @@ namespace MainProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap duck {
+            get {
+                object obj = ResourceManager.GetObject("duck", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap duck_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("duck-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap grass_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("grass-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap grass_removebg_preview1 {
+            get {
+                object obj = ResourceManager.GetObject("grass-removebg-preview1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap grassBackground2 {
             get {
                 object obj = ResourceManager.GetObject("grassBackground2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ship_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("ship-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tree_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("tree-removebg-preview", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
