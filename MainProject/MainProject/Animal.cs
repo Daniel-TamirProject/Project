@@ -52,6 +52,10 @@ namespace MainProject
         {
             return true;
         }
+        public override void Draw(Graphics g)
+        {
+
+        }
     }
 }
 

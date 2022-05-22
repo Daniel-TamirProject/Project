@@ -19,40 +19,16 @@ namespace MainProject
 
         public Ship(int id) : base(1, id)
         {
-            //photo = new PictureBox();
-
-            photo.Name = "ship";
-
-
-            photo.Image = MainProject.Properties.Resources.ship_removebg_preview;
-
+            img = MainProject.Properties.Resources.ship_removebg_preview;
         }
 
         public Ship(int id, int Cx, int Cy) : base(1, id)
         {
-            //photo = new PictureBox();
-
-            photo.Name = "ship";
-
-
-            photo.Image = MainProject.Properties.Resources.ship_removebg_preview;
-
-            x = Cx - photo.Width / 2;
-            y = Cy - photo.Height / 2;
-            photo.Location = new Point(x, y);
+            x = Cx;
+            y = Cy;
+            img = MainProject.Properties.Resources.ship_removebg_preview;
         }
 
-        public PictureBox Photo
-        {
-            get
-            {
-                return photo;
-            }
-            set
-            {
-                photo = value;
-            }
-        }
         public int X
         {
             get
@@ -79,7 +55,12 @@ namespace MainProject
 
         public override bool isInside(int xP, int yP)
         {
-            return Math.Abs(xP - x) <= photo.Width / 2 && Math.Abs(yP - y) <= photo.Height / 2;
+            return Math.Abs(xP - x) <= img.Width / 2 && Math.Abs(yP - y) <= img.Height / 2;
+        }
+
+        public override void Draw(Graphics g)
+        {
+            g.DrawImage(img, x - img.Width / 2, y - img.Height / 2);
         }
     }
 }

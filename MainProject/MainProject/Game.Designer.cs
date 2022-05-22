@@ -38,13 +38,14 @@ namespace MainProject
             this.shipPic = new System.Windows.Forms.PictureBox();
             this.ChickenPic = new System.Windows.Forms.PictureBox();
             this.CowPic = new System.Windows.Forms.PictureBox();
-            this.backgroundpanel = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.treePic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grassPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.adamaPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.shipPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChickenPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CowPic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // counter
@@ -56,6 +57,7 @@ namespace MainProject
             this.counter.Size = new System.Drawing.Size(40, 13);
             this.counter.TabIndex = 2;
             this.counter.Text = "count :";
+            this.counter.Click += new System.EventHandler(this.counter_Click);
             // 
             // animal
             // 
@@ -151,18 +153,17 @@ namespace MainProject
             this.CowPic.TabStop = false;
             this.CowPic.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // backgroundpanel
+            // pictureBox1
             // 
-            this.backgroundpanel.BackColor = System.Drawing.Color.Transparent;
-            this.backgroundpanel.BackgroundImage = global::MainProject.Properties.Resources.grassBackground2;
-            this.backgroundpanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.backgroundpanel.Location = new System.Drawing.Point(2, 2);
-            this.backgroundpanel.Margin = new System.Windows.Forms.Padding(2);
-            this.backgroundpanel.Name = "backgroundpanel";
-            this.backgroundpanel.Size = new System.Drawing.Size(730, 394);
-            this.backgroundpanel.TabIndex = 0;
-            this.backgroundpanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.backgroundpanel_MouseClick);
-            this.backgroundpanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.backgroundpanel_MouseDown);
+            this.pictureBox1.Image = global::MainProject.Properties.Resources.grassBackground2;
+            this.pictureBox1.Location = new System.Drawing.Point(0, -2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(726, 403);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox1_Paint);
+            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
             // 
             // Game
             // 
@@ -171,6 +172,7 @@ namespace MainProject
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.treePic);
             this.Controls.Add(this.grassPic);
             this.Controls.Add(this.adamaPic);
@@ -180,10 +182,8 @@ namespace MainProject
             this.Controls.Add(this.ChickenPic);
             this.Controls.Add(this.CowPic);
             this.Controls.Add(this.counter);
-            this.Controls.Add(this.backgroundpanel);
             this.Name = "Game";
             this.Text = "Game";
-            this.Load += new System.EventHandler(this.Game_Load);
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Game_MouseClick_1);
             ((System.ComponentModel.ISupportInitialize)(this.treePic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grassPic)).EndInit();
@@ -191,14 +191,13 @@ namespace MainProject
             ((System.ComponentModel.ISupportInitialize)(this.shipPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChickenPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CowPic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel backgroundpanel;
         private System.Windows.Forms.Label counter;
         private System.Windows.Forms.PictureBox CowPic;
         private System.Windows.Forms.PictureBox ChickenPic;
@@ -208,5 +207,6 @@ namespace MainProject
         private System.Windows.Forms.PictureBox adamaPic;
         private System.Windows.Forms.PictureBox grassPic;
         private System.Windows.Forms.PictureBox treePic;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

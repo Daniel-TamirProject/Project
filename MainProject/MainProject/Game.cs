@@ -17,13 +17,13 @@ namespace MainProject
         //SortedList items = new SortedList();
         List<Cow> cows = new List<Cow>();
         List<Product> products = new List<Product>();
-        PictureBox newPic;
+        
 
 
         Product futureBorn;
 
 
-        int flag = 1, index = -1;
+        int flag = 1, index;
         int id = 0;
         
         //int idtest = 0;
@@ -31,11 +31,6 @@ namespace MainProject
         public Game()
         {
             InitializeComponent();
-        }
-
-        private void Game_Load(object sender, EventArgs e)
-        {
-            
         }
 
         private void backgroundpanel_MouseDown(object sender, MouseEventArgs e)
@@ -51,7 +46,7 @@ namespace MainProject
             }
         }
 
-        private void backgroundpanel_MouseClick(object sender, MouseEventArgs e)
+       /* private void backgroundpanel_MouseClick(object sender, MouseEventArgs e)
         {
             
             if (e.Button == MouseButtons.Left)
@@ -59,13 +54,13 @@ namespace MainProject
                 for(int i = 0;i<products.Count;i++)
                 {
                     if (products[i].isInside(e.X, e.Y))
-                        backgroundpanel.Visible = false;
+                        //backgroundpanel.Visible = false;
                 }                
 
                 futureBorn = getNewProduct(flag, e.X, e.Y);
                 products.Add(futureBorn);
                 newPic = futureBorn.photo;
-                backgroundpanel.Controls.Add(newPic);
+              //  backgroundpanel.Controls.Add(newPic);
 
                 newPic.MouseClick += NewPic_MouseClick;
             }
@@ -75,7 +70,7 @@ namespace MainProject
                 //newPic.Click += NewPic_Click;
             }
             // רשימות מקושרות מטריצות קבצים מחרוזות
-        }
+        }*/
 
         private void MakeProduct()
         {
@@ -89,7 +84,7 @@ namespace MainProject
                 Product tempPro = sender as Product;
                 // temPic = sender as PictureBox;
 
-                backgroundpanel.Controls.Remove(tempPro.photo);
+               // backgroundpanel.Controls.Remove(tempPro.photo);
             }
         }
 
@@ -100,20 +95,6 @@ namespace MainProject
 
         private void Picture1_Click(object sender, EventArgs e)
         {
-            
-            
-
-
-            /*for (int i = 0; i < cows.Count; i++)
-            {
-                if (cows[i].isInside(x, y))
-                {
-                    newcow = cows[i];
-                    cows.Remove(newcow);
-                    backgroundpanel.Controls.Remove(newcow.photo);
-                    id--;
-                }
-            }*/
 
             counter.Text = "num:" + cows.Count();
         }
@@ -149,11 +130,6 @@ namespace MainProject
             flag = 1;
         }
 
-        private void Game_MouseClick(object sender, MouseEventArgs e)
-        {
-
-        }
-
         private void ChickenPic_Click(object sender, EventArgs e)
         {
             flag = 2;
@@ -168,9 +144,61 @@ namespace MainProject
         {
             if (e.Button == MouseButtons.Right)
             {
-                backgroundpanel.Controls.Remove(products[1].photo);
+                //backgroundpanel.Controls.Remove(products[1].photo);
 
             }
+        }
+
+        private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
+        {
+            index = -1;
+            if(e.Button == MouseButtons.Left)
+            {
+                for(int i=0;i<products.Count;i++)
+                {
+                    if (products[i].isInside(e.X, e.Y))
+                    {
+                        index = i;
+                        string s = e.Button.ToString();
+                        if (s == "Right") //if Right button pressed - Remove
+                        {
+                            products.Remove(products[i]);
+                            index = -1;
+                            pictureBox1.Invalidate();
+                            counter.Text = "111";
+
+                            return;
+                        }
+                        break;
+                    }
+                     
+                }
+
+
+                if (index == -1)
+                {
+                    futureBorn = getNewProduct(flag, e.X, e.Y);
+                    products.Add(futureBorn);
+                    //newPic = futureBorn.photo;
+                    pictureBox1.Invalidate();
+                    //newPic.MouseClick += NewPic_MouseClick;
+
+                }
+
+            }
+        }
+
+        private void pictureBox1_Paint(object sender, PaintEventArgs e)
+        {
+            for(int i=0;i<products.Count;i++)
+            {
+                products[i].Draw(e.Graphics);
+            }
+        }
+
+        private void counter_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void adamaPic_Click(object sender, EventArgs e)

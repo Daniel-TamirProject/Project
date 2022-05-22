@@ -14,14 +14,12 @@ namespace MainProject
         public int type;
         public int numOfProduct;
         Timer lifeTime;
-        public PictureBox photo;
+        public Image img;
 
         public Product()
         {
             numOfProduct = 0;
             type = 0;
-
-            photo = new PictureBox();
             lifeTime = new Timer();
             lifeTime.Start();
         }
@@ -30,13 +28,6 @@ namespace MainProject
         {
             numOfProduct = id;
             type = typ;
-
-            photo = new PictureBox();
-
-            photo.Width = 50;
-            photo.Height = 50;
-            photo.SizeMode = PictureBoxSizeMode.StretchImage;
-
             lifeTime = new Timer();
             lifeTime.Start();
         }
@@ -77,6 +68,6 @@ namespace MainProject
         }
 
         public abstract bool isInside(int xP, int yP);
- 
+        public abstract void Draw(Graphics g);
     }
 }
