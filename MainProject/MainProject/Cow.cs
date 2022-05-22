@@ -12,7 +12,6 @@ namespace MainProject
 {
     class Cow:Animal
     {
-        public int x, y;
         public Cow(int id) : base(1,id)
         {
             img = MainProject.Properties.Resources.cow2_removebg_preview;
@@ -24,29 +23,7 @@ namespace MainProject
             img = MainProject.Properties.Resources.cow2_removebg_preview;
         }
 
-        public int X
-        {
-            get
-            {
-                return x;
-            }
-            set
-            {
-                x = value;
-            }
-        }
 
-        public int Y
-        {
-            get
-            {
-                return y;
-            }
-            set
-            {
-                y = value;
-            }
-        }
 
         public override bool isInside(int xP, int yP)
         {

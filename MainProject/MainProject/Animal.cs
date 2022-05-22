@@ -13,7 +13,6 @@ namespace MainProject
     class Animal : Product
     {   
         public int breed; //{ 1 = Cow, 2 = Chicken }
-        //public static int numberOfAnimal;
         public int id;
 
         public Animal()//defult cons
@@ -23,30 +22,6 @@ namespace MainProject
         public Animal(int bre,int id) : base(1,id)
         {
             breed = bre;
-        }
-
-        public int Breed
-        {
-            get
-            {
-                return breed;
-            }
-            set
-            {
-                breed = value;
-            }
-        }
-
-        public int Id
-        {
-            get
-            {
-                return id;
-            }
-            set
-            {
-                id = value;
-            }
         }
         public override bool isInside(int xP, int yP)
         {

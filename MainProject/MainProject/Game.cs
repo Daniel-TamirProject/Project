@@ -13,92 +13,18 @@ namespace MainProject
 {
     public partial class Game : Form
     {
-        //List<PictureBox> items = new List<PictureBox>();
-        //SortedList items = new SortedList();
-        List<Cow> cows = new List<Cow>();
         List<Product> products = new List<Product>();
-        
-
-
         Product futureBorn;
 
-
-        int flag = 1, index;
+        int flag = 1, index=-1;
         int id = 0;
-        
-        //int idtest = 0;
 
         public Game()
         {
             InitializeComponent();
         }
 
-        private void backgroundpanel_MouseDown(object sender, MouseEventArgs e)
-        {
-            string s = e.Button.ToString();
-            if (s == "Right")
-            {
-                for (int i = 0; i < products.Count; i++)
-                {
-                    if (products[i].isInside(e.X, e.Y))
-                        index = i;
-                }
-            }
-        }
-
-       /* private void backgroundpanel_MouseClick(object sender, MouseEventArgs e)
-        {
-            
-            if (e.Button == MouseButtons.Left)
-            {
-                for(int i = 0;i<products.Count;i++)
-                {
-                    if (products[i].isInside(e.X, e.Y))
-                        //backgroundpanel.Visible = false;
-                }                
-
-                futureBorn = getNewProduct(flag, e.X, e.Y);
-                products.Add(futureBorn);
-                newPic = futureBorn.photo;
-              //  backgroundpanel.Controls.Add(newPic);
-
-                newPic.MouseClick += NewPic_MouseClick;
-            }
-            else if(e.Button == MouseButtons.Right)
-            {
-                //backgroundpanel.Controls.Remove(products[1].photo);
-                //newPic.Click += NewPic_Click;
-            }
             // רשימות מקושרות מטריצות קבצים מחרוזות
-        }*/
-
-        private void MakeProduct()
-        {
-
-        }
-
-        private void NewPic_MouseClick(object sender, MouseEventArgs e)
-        {
-            if(e.Button == MouseButtons.Right)
-            {
-                Product tempPro = sender as Product;
-                // temPic = sender as PictureBox;
-
-               // backgroundpanel.Controls.Remove(tempPro.photo);
-            }
-        }
-
-        private void NewPic_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void Picture1_Click(object sender, EventArgs e)
-        {
-
-            counter.Text = "num:" + cows.Count();
-        }
-
         Product getNewProduct(int flag,int x,int y)
         {
             Product born;
@@ -140,52 +66,59 @@ namespace MainProject
             flag = 3;
         }
 
-        private void Game_MouseClick_1(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Right)
-            {
-                //backgroundpanel.Controls.Remove(products[1].photo);
-
-            }
-        }
-
         private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
         {
             index = -1;
-            if(e.Button == MouseButtons.Left)
+
+            for (int i = 0; i < products.Count; i++)
             {
-                for(int i=0;i<products.Count;i++)
+                if (products[i].isInside(e.X, e.Y))
                 {
-                    if (products[i].isInside(e.X, e.Y))
+                    index = i;
+
+                    if (e.Button == MouseButtons.Right) //if Right button pressed - Remove
                     {
-                        index = i;
-                        string s = e.Button.ToString();
-                        if (s == "Right") //if Right button pressed - Remove
-                        {
-                            products.Remove(products[i]);
-                            index = -1;
-                            pictureBox1.Invalidate();
-                            counter.Text = "111";
+                        products.Remove(products[i]);
+                        counter.Text = "Counter:" + products.Count.ToString();
+                        index = -1;
+                        pictureBox1.Invalidate();
 
-                            return;
-                        }
-                        break;
+                        return;
                     }
-                     
+                    break;
                 }
+            }
 
-
+            if (e.Button == MouseButtons.Left)
+            {
                 if (index == -1)
                 {
                     futureBorn = getNewProduct(flag, e.X, e.Y);
                     products.Add(futureBorn);
                     //newPic = futureBorn.photo;
+                    counter.Text = "Counter:" + products.Count.ToString();
+
                     pictureBox1.Invalidate();
                     //newPic.MouseClick += NewPic_MouseClick;
 
                 }
-
             }
+        }
+
+        private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (index >= 0)
+            {
+                Product p = (Product)products[index];
+                p.x = e.X;
+                p.y = e.Y;
+                pictureBox1.Invalidate();
+            }
+        }
+
+        private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
+        {
+            index = -1;
         }
 
         private void pictureBox1_Paint(object sender, PaintEventArgs e)
@@ -194,16 +127,6 @@ namespace MainProject
             {
                 products[i].Draw(e.Graphics);
             }
-        }
-
-        private void counter_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void adamaPic_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -15,6 +15,7 @@ namespace MainProject
         public int numOfProduct;
         Timer lifeTime;
         public Image img;
+        public int x, y;
 
         public Product()
         {
@@ -26,45 +27,12 @@ namespace MainProject
 
         public Product(int typ,int id)
         {
+            x = 0;
+            y = 0;
             numOfProduct = id;
             type = typ;
             lifeTime = new Timer();
             lifeTime.Start();
-        }
-        public int Type
-        {
-            get
-            {
-                return type;
-            }
-            set
-            {
-                type = value;
-            }
-        }
-
-        public int NumOfProduct
-        {
-            get
-            {
-                return numOfProduct;
-            }
-            set
-            {
-                numOfProduct = value;
-            }
-        }
-
-        public Timer LifeTime
-        {
-            get
-            {
-                return lifeTime;
-            }
-            set
-            {
-                lifeTime = value;
-            }
         }
 
         public abstract bool isInside(int xP, int yP);
