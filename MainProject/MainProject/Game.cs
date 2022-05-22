@@ -17,7 +17,7 @@ namespace MainProject
         //SortedList items = new SortedList();
         List<Cow> cows = new List<Cow>();
         List<Product> products = new List<Product>();
-
+        PictureBox newPic;
 
 
         Product futureBorn;
@@ -53,17 +53,48 @@ namespace MainProject
 
         private void backgroundpanel_MouseClick(object sender, MouseEventArgs e)
         {
+            
             if (e.Button == MouseButtons.Left)
             {
+                for(int i = 0;i<products.Count;i++)
+                {
+                    if (products[i].isInside(e.X, e.Y))
+                        backgroundpanel.Visible = false;
+                }                
+
                 futureBorn = getNewProduct(flag, e.X, e.Y);
                 products.Add(futureBorn);
-                backgroundpanel.Controls.Add(futureBorn.photo);
+                newPic = futureBorn.photo;
+                backgroundpanel.Controls.Add(newPic);
+
+                newPic.MouseClick += NewPic_MouseClick;
             }
             else if(e.Button == MouseButtons.Right)
             {
                 //backgroundpanel.Controls.Remove(products[1].photo);
-
+                //newPic.Click += NewPic_Click;
             }
+            // רשימות מקושרות מטריצות קבצים מחרוזות
+        }
+
+        private void MakeProduct()
+        {
+
+        }
+
+        private void NewPic_MouseClick(object sender, MouseEventArgs e)
+        {
+            if(e.Button == MouseButtons.Right)
+            {
+                Product tempPro = sender as Product;
+                // temPic = sender as PictureBox;
+
+                backgroundpanel.Controls.Remove(tempPro.photo);
+            }
+        }
+
+        private void NewPic_Click(object sender, EventArgs e)
+        {
             
         }
 
