@@ -13,15 +13,15 @@ namespace MainProject
     class Animal : Product
     {   
         public int breed; //{ 1 = Cow, 2 = Chicken }
-        public int id;
-
+        public static int numberOfAnimals = 0;
         public Animal()//defult cons
         {
             breed = 0;
         }
-        public Animal(int bre,int id) : base(1,id)
+        public Animal(int bre) : base(1)
         {
             breed = bre;
+            numberOfAnimals++;
         }
         public override bool IsInside(int xP, int yP)
         {
@@ -31,10 +31,12 @@ namespace MainProject
         {
             return (Image)(new Bitmap(imgToResize, size));
         }
-        public override void Draw(Graphics g)
+        public override void Draw(Graphics g) { }
+        ~Animal()
         {
-
+            numberOfAnimals--;
         }
+        
     }
 }
 

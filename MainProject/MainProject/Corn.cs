@@ -1,35 +1,35 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
-
 
 namespace MainProject
 {
-    class Ship : Animal
+    class Corn : Plant
     {
-        public Ship(int id) : base(1, id)
-        {
-            img = MainProject.Properties.Resources.ship_removebg_preview1;
-            img = resizeImage(img, new Size(50, 50));
-        }
 
-        public Ship(int id, int Cx, int Cy) : base(1, id)
+        public Corn() : base(2) // Kind = 2 = Corn
+        {
+            img = MainProject.Properties.Resources.adama_removebg_preview1;
+            img = resizeImage(img, new Size(65, 65));
+            generationSpeed = 3;
+        }
+        public Corn(int Cx, int Cy) : base(2) // Kind = 2 = Corn
         {
             x = Cx;
             y = Cy;
-            img = MainProject.Properties.Resources.ship_removebg_preview1;
-            img = resizeImage(img, new Size(50, 50));
+            img = MainProject.Properties.Resources.adama_removebg_preview1;
+            img = resizeImage(img, new Size(65, 65));
+            generationSpeed = 3;
         }
+
         public override Image resizeImage(Image imgToResize, Size size)
         {
             return (Image)(new Bitmap(imgToResize, size));
         }
+
         public override bool IsInside(int xP, int yP)
         {
             return Math.Abs(xP - x) <= img.Width / 2 && Math.Abs(yP - y) <= img.Height / 2;
@@ -39,4 +39,8 @@ namespace MainProject
             g.DrawImage(img, x - img.Width / 2, y - img.Height / 2);
         }
     }
+
+
+
+
 }

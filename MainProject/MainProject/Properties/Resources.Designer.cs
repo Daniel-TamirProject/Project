@@ -123,16 +123,6 @@ namespace MainProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap duck_removebg_preview {
-            get {
-                object obj = ResourceManager.GetObject("duck-removebg-preview", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap grass_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("grass-removebg-preview", resourceCulture);
@@ -156,26 +146,6 @@ namespace MainProject.Properties {
         internal static System.Drawing.Bitmap grassBackground2 {
             get {
                 object obj = ResourceManager.GetObject("grassBackground2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap ship_removebg_preview {
-            get {
-                object obj = ResourceManager.GetObject("ship-removebg-preview", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap ship_removebg_preview1 {
-            get {
-                object obj = ResourceManager.GetObject("ship-removebg-preview1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

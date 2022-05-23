@@ -13,19 +13,21 @@ namespace MainProject
 {
     class Chicken : Animal
     {
-        public Chicken(int id) : base(1, id)
+        public Chicken() : base(2) // Breed = 2 = Chicken
         {
 
             img = MainProject.Properties.Resources.chicken2_removebg_preview1;
             img = resizeImage(img, new Size(40, 40));
+            generationSpeed = 4;
         }
 
-        public Chicken(int id, int Cx, int Cy) : base(1, id)
+        public Chicken(int Cx, int Cy) : base(2) // Breed = 2 = Chicken
         {
             x = Cx;
             y = Cy;
             img = MainProject.Properties.Resources.chicken2_removebg_preview1;
             img = resizeImage(img, new Size(40, 40));
+            generationSpeed = 4;
         }
 
         public override Image resizeImage(Image imgToResize, Size size)

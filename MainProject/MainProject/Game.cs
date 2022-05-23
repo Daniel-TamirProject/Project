@@ -17,14 +17,12 @@ namespace MainProject
         Product futureBorn;
 
         int flag = 1, index=-1;
-        int id = 0;
 
         public Game()
         {
             InitializeComponent();
         }
 
-            // רשימות מקושרות מטריצות קבצים מחרוזות
         Product getNewProduct(int flag,int x,int y)
         {
             Product born;
@@ -32,17 +30,22 @@ namespace MainProject
             {
                 case 1:
                     {
-                        born = new Cow(id,x,y);
+                        born = new Cow(x,y);
                         return born;
                     }
                 case 2:
                     {
-                        born = new Chicken(id, x, y);
+                        born = new Chicken(x, y);
                         return born;
                     }
                 case 3:
                     {
-                        born = new Ship(id, x, y);
+                        born = new AppleTree(x, y);
+                        return born;
+                    }
+                case 4:
+                    {
+                        born = new Corn(x, y);
                         return born;
                     }
                 default:
@@ -61,11 +64,6 @@ namespace MainProject
             flag = 2;
         }
 
-        private void shipPic_Click(object sender, EventArgs e)
-        {
-            flag = 3;
-        }
-
         private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
         {
             index = -1;
@@ -78,8 +76,15 @@ namespace MainProject
 
                     if (e.Button == MouseButtons.Right) //if Right button pressed - Remove
                     {
+                        if (products[i].type == 1)
+                            Animal.numberOfAnimals--;
+
+                        if (products[i].type == 2)
+                            Plant.numberOfPlants--;
+
                         products.Remove(products[i]);
-                        counter.Text = "Counter:" + products.Count.ToString();
+                        animalCounter.Text = "Animals: " + Animal.numberOfAnimals;
+                        plantCounter.Text = "Plants: " + Plant.numberOfPlants;
                         index = -1;
                         pictureBox1.Invalidate();
 
@@ -95,11 +100,9 @@ namespace MainProject
                 {
                     futureBorn = getNewProduct(flag, e.X, e.Y);
                     products.Add(futureBorn);
-                    //newPic = futureBorn.photo;
-                    counter.Text = "Counter:" + products.Count.ToString();
-
+                    animalCounter.Text = "Animals: " + Animal.numberOfAnimals;
+                    plantCounter.Text = "Plants: " + Plant.numberOfPlants;
                     pictureBox1.Invalidate();
-                    //newPic.MouseClick += NewPic_MouseClick;
 
                 }
             }
@@ -119,6 +122,16 @@ namespace MainProject
         private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
         {
             index = -1;
+        }
+
+        private void treePic_Click(object sender, EventArgs e)
+        {
+            flag = 3;
+        }
+
+        private void adamaPic_Click(object sender, EventArgs e)
+        {
+            flag = 4;
         }
 
         private void pictureBox1_Paint(object sender, PaintEventArgs e)

@@ -1,30 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace MainProject
 {
-    class Cow:Animal
+    class AppleTree:Plant
     {
-        public Cow() : base(1) // Breed = 1 = Cow
+        
+        public AppleTree() : base(1) // Kind = 1 = Apple
         {
-            img = MainProject.Properties.Resources.cow2_removebg_preview1;
+            img = MainProject.Properties.Resources.tree_removebg_preview;
             img = resizeImage(img, new Size(65, 65));
-            generationSpeed = 2;
+            generationSpeed = 4;
         }
-        public Cow(int Cx,int Cy) : base(1) // Breed = 1 = Cow
-        {          
+        public AppleTree(int Cx, int Cy) : base(1) // Kind = 1 = Apple
+        {
             x = Cx;
             y = Cy;
-            img = MainProject.Properties.Resources.cow2_removebg_preview1;
+            img = MainProject.Properties.Resources.tree_removebg_preview;
             img = resizeImage(img, new Size(65, 65));
-            generationSpeed = 2;
+            generationSpeed = 4;
         }
 
         public override Image resizeImage(Image imgToResize, Size size)
@@ -38,10 +36,11 @@ namespace MainProject
         }
         public override void Draw(Graphics g)
         {
-            g.DrawImage(img, x - img.Width / 2, y - img.Height / 2) ;
+            g.DrawImage(img, x - img.Width / 2, y - img.Height / 2);
         }
     }
 
 
-    
+
+
 }
