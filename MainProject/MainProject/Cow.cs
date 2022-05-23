@@ -14,7 +14,7 @@ namespace MainProject
     {
         //public static int numberOfCow;
         public PictureBox photo;
-        public int x, y;
+        public float x, y;
 
         public Cow(int id) : base(1,id)
         {
@@ -27,7 +27,7 @@ namespace MainProject
             photo.Image = MainProject.Properties.Resources.cow2_removebg_preview;
             photo.SizeMode = PictureBoxSizeMode.StretchImage;
         }
-        public Cow(int id,int Cx,int Cy) : base(1, id)
+        public Cow(int id,float Cx,float Cy) : base(1, id)
         {
             photo = new PictureBox();
 
@@ -38,9 +38,9 @@ namespace MainProject
             photo.Image = MainProject.Properties.Resources.cow2_removebg_preview;
             photo.SizeMode = PictureBoxSizeMode.StretchImage;
 
-            x = Cx - photo.Width / 2;
-            y = Cy - photo.Height / 2;
-            photo.Location = new Point(x, y);
+            x = Cx;
+            y = Cy;
+            photo.Location = new Point((int)(Cx - photo.Width / 2), (int)(Cy - photo.Height / 2));
         }
 
         public PictureBox Photo
@@ -54,7 +54,7 @@ namespace MainProject
                 photo = value;
             }
         }
-        public int X
+        public float X
         {
             get
             {
@@ -66,7 +66,7 @@ namespace MainProject
             }
         }
 
-        public int Y
+        public float Y
         {
             get
             {
@@ -80,15 +80,16 @@ namespace MainProject
 
         public bool IsInside(int xP, int yP)
         {
+
             return Math.Abs(xP - x) <= photo.Width / 2 && Math.Abs(yP - y) <= photo.Height / 2;
         }
         
-        public void CreatCow(int id,int Cx,int Cy)
-        {
-            x = Cx;
-            y = Cy;
-            photo.Location = new Point(x, y);
-        }
+        //public void CreatCow(int id,int Cx,int Cy)
+        //{
+        //    x = Cx;
+        //    y = Cy;
+        //    photo.Location = new Point(x, y);
+        //}
 
 
         //internal void photo_Click(object sender, EventArgs e)

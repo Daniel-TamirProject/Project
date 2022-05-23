@@ -40,21 +40,23 @@ namespace MainProject
         private void backgroundpanel_MouseDown(object sender, MouseEventArgs e)
         {
             index = -1;
-            for (int i = 0; i < items.Count; i++)
+            string s = e.Button.ToString();
+            if (e.Button == MouseButtons.Right)
             {
-                if (cows[i].IsInside(e.X, e.Y))
+                for (int i = 0; i < cows.Count; i++)
                 {
-                    index = i;
-                    string s = e.Button.ToString();
-                    if (s == "right")
+                    if (cows[i].IsInside(e.X, e.Y))
                     {
-                        newcow = cows[index];
-                        cows.RemoveAt(index);
+                        index = i;
+                        newcow = cows[i];
+                        cows.RemoveAt(i);
                         backgroundpanel.Controls.Remove(newcow.photo);
                         index = -1;
                         backgroundpanel.Invalidate();
+                        counter.Text = "count:" + cows.Count();
                     }
                 }
+                return;
             }
 
             if (index < 0)
@@ -81,7 +83,7 @@ namespace MainProject
 
                 }
             }
-            counter.Text = "count:" + items.Count();
+            counter.Text = "count:" + cows.Count();
         }
 
         private void backgroundpanel_MouseUp(object sender, MouseEventArgs e)
