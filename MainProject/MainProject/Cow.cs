@@ -15,14 +15,14 @@ namespace MainProject
         public Cow(int id) : base(1,id)
         {
             img = MainProject.Properties.Resources.cow2_removebg_preview1;
-            img = resizeImage(img, new Size(50, 50));
+            img = resizeImage(img, new Size(65, 65));
         }
         public Cow(int id,int Cx,int Cy) : base(1, id)
         {          
             x = Cx;
             y = Cy;
             img = MainProject.Properties.Resources.cow2_removebg_preview1;
-            img = resizeImage(img, new Size(50, 50));
+            img = resizeImage(img, new Size(65, 65));
         }
 
         public override Image resizeImage(Image imgToResize, Size size)
