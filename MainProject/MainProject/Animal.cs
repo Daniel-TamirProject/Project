@@ -10,10 +10,9 @@ using System.Windows.Forms;
 
 namespace MainProject
 {
-    class Animal : product
+    class Animal : Product
     {   
         public int breed; //{ 1 = Cow, 2 = Chicken }
-        //public static int numberOfAnimal;
         public int id;
 
         public Animal()//defult cons
@@ -24,29 +23,13 @@ namespace MainProject
         {
             breed = bre;
         }
-
-        public int Breed
+        public override bool isInside(int xP, int yP)
         {
-            get
-            {
-                return breed;
-            }
-            set
-            {
-                breed = value;
-            }
+            return true;
         }
-
-        public int Id
+        public override void Draw(Graphics g)
         {
-            get
-            {
-                return id;
-            }
-            set
-            {
-                id = value;
-            }
+
         }
     }
 }
