@@ -161,7 +161,7 @@ namespace MainProject
             this.CowPic.Location = new System.Drawing.Point(989, 30);
             this.CowPic.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CowPic.Name = "CowPic";
-            this.CowPic.Size = new System.Drawing.Size(63, 52);
+            this.CowPic.Size = new System.Drawing.Size(63, 54);
             this.CowPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.CowPic.TabIndex = 3;
             this.CowPic.TabStop = false;
@@ -184,7 +184,7 @@ namespace MainProject
             this.Controls.Add(this.ChickenPic);
             this.Controls.Add(this.CowPic);
             this.Controls.Add(this.counter);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Game";
             this.Text = "Game";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
