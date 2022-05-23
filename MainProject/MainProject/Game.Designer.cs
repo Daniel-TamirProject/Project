@@ -131,7 +131,7 @@ namespace MainProject
             // shipPic
             // 
             this.shipPic.BackColor = System.Drawing.Color.Transparent;
-            this.shipPic.Image = global::MainProject.Properties.Resources.ship_removebg_preview;
+            this.shipPic.Image = global::MainProject.Properties.Resources.ship_removebg_preview1;
             this.shipPic.Location = new System.Drawing.Point(989, 169);
             this.shipPic.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.shipPic.Name = "shipPic";
@@ -144,7 +144,7 @@ namespace MainProject
             // ChickenPic
             // 
             this.ChickenPic.BackColor = System.Drawing.Color.Transparent;
-            this.ChickenPic.Image = global::MainProject.Properties.Resources.chicken2_removebg_preview;
+            this.ChickenPic.Image = global::MainProject.Properties.Resources.chicken2_removebg_preview1;
             this.ChickenPic.Location = new System.Drawing.Point(989, 100);
             this.ChickenPic.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ChickenPic.Name = "ChickenPic";
@@ -157,7 +157,7 @@ namespace MainProject
             // CowPic
             // 
             this.CowPic.BackColor = System.Drawing.Color.Transparent;
-            this.CowPic.Image = global::MainProject.Properties.Resources.cow2_removebg_preview;
+            this.CowPic.Image = global::MainProject.Properties.Resources.cow2_removebg_preview1;
             this.CowPic.Location = new System.Drawing.Point(989, 30);
             this.CowPic.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CowPic.Name = "CowPic";

@@ -16,17 +16,24 @@ namespace MainProject
         public Chicken(int id) : base(1, id)
         {
 
-            img = MainProject.Properties.Resources.chicken2_removebg_preview;
+            img = MainProject.Properties.Resources.chicken2_removebg_preview1;
+            img = resizeImage(img, new Size(50, 50));
         }
 
         public Chicken(int id, int Cx, int Cy) : base(1, id)
         {
             x = Cx;
             y = Cy;
-            img = MainProject.Properties.Resources.chicken2_removebg_preview;
+            img = MainProject.Properties.Resources.chicken2_removebg_preview1;
+            img = resizeImage(img, new Size(50, 50));
         }
 
-        public override bool isInside(int xP, int yP)
+        public override Image resizeImage(Image imgToResize, Size size)
+        {
+            return (Image)(new Bitmap(imgToResize, size));
+        }
+
+        public override bool IsInside(int xP, int yP)
         {
             return Math.Abs(xP - x) <= img.Width / 2 && Math.Abs(yP - y) <= img.Height / 2;
         }

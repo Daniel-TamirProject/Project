@@ -72,7 +72,7 @@ namespace MainProject
 
             for (int i = 0; i < products.Count; i++)
             {
-                if (products[i].isInside(e.X, e.Y))
+                if (products[i].IsInside(e.X, e.Y))
                 {
                     index = i;
 

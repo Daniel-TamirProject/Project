@@ -33,9 +33,12 @@ namespace MainProject
             type = typ;
             lifeTime = new Timer();
             lifeTime.Start();
+            //img = new Bitmap(img, new Size(10,10));
+            //img = resizeImage(img, new Size(50, 50));
         }
 
-        public abstract bool isInside(int xP, int yP);
+        public abstract Image resizeImage(Image imgToResize, Size size);
+        public abstract bool IsInside(int xP, int yP);
         public abstract void Draw(Graphics g);
     }
 }

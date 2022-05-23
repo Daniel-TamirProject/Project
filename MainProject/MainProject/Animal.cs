@@ -23,9 +23,13 @@ namespace MainProject
         {
             breed = bre;
         }
-        public override bool isInside(int xP, int yP)
+        public override bool IsInside(int xP, int yP)
         {
             return true;
+        }
+        public override Image resizeImage(Image imgToResize, Size size)
+        {
+            return (Image)(new Bitmap(imgToResize, size));
         }
         public override void Draw(Graphics g)
         {
