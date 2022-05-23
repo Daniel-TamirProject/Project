@@ -111,7 +111,17 @@ namespace MainProject
             }
             else if (e.Button == MouseButtons.Right)
             {
-
+                for (int i = 0; i < cows.Count; i++)
+                {
+                    if (cows[i].isInside(e.X, e.Y))
+                    {
+                        index = i;
+                        newcow = cows[i];
+                        cows.Remove(newcow);
+                        backgroundpanel.Controls.Remove(newcow.photo);
+                        index = -1;
+                    }
+                }
             }
 
 
