@@ -9,14 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 namespace MainProject
 {
-    class product
+    class Product
     {
         public int type;
         public int numOfProduct;
         Timer lifeTime;
 
 
-        public product()
+        public Product()
         {
             numOfProduct = 0;
             type = 0;
@@ -25,7 +25,7 @@ namespace MainProject
             lifeTime.Start();
         }
 
-        public product(int typ,int id)
+        public Product(int typ,int id)
         {
             numOfProduct = id;
             type = typ;
@@ -70,5 +70,6 @@ namespace MainProject
         }
 
 
+       // public abstract bool IsInside(int xP, int yP);
     }
 }

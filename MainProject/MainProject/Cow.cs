@@ -78,7 +78,7 @@ namespace MainProject
             }
         }
 
-        public bool isInside(int xP, int yP)
+        public bool IsInside(int xP, int yP)
         {
             return Math.Abs(xP - x) <= photo.Width / 2 && Math.Abs(yP - y) <= photo.Height / 2;
         }
