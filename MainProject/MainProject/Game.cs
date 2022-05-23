@@ -49,9 +49,10 @@ namespace MainProject
                     if (s == "right")
                     {
                         newcow = cows[index];
-                        cows.Remove(newcow);
+                        cows.RemoveAt(index);
                         backgroundpanel.Controls.Remove(newcow.photo);
                         index = -1;
+                        backgroundpanel.Invalidate();
                     }
                 }
             }
