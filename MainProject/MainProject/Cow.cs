@@ -12,93 +12,32 @@ namespace MainProject
 {
     class Cow:Animal
     {
-        //public static int numberOfCow;
-        public PictureBox photo;
-        public int x, y;
-
         public Cow(int id) : base(1,id)
         {
-            photo = new PictureBox();
-
-            photo.Name = "cow";
-            photo.Width = 50;
-            photo.Height = 50;
-
-            photo.Image = MainProject.Properties.Resources.cow2_removebg_preview;
-            photo.SizeMode = PictureBoxSizeMode.StretchImage;
+            img = MainProject.Properties.Resources.cow2_removebg_preview1;
+            img = resizeImage(img, new Size(50, 50));
         }
         public Cow(int id,int Cx,int Cy) : base(1, id)
-        {
-            photo = new PictureBox();
-
-            photo.Name = "cow";
-            photo.Width = 50;
-            photo.Height = 50;
-
-            photo.Image = MainProject.Properties.Resources.cow2_removebg_preview;
-            photo.SizeMode = PictureBoxSizeMode.StretchImage;
-
-            x = Cx - photo.Width / 2;
-            y = Cy - photo.Height / 2;
-            photo.Location = new Point(x, y);
-        }
-
-        public PictureBox Photo
-        {
-            get
-            {
-                return photo;
-            }
-            set
-            {
-                photo = value;
-            }
-        }
-        public int X
-        {
-            get
-            {
-                return x;
-            }
-            set
-            {
-                x = value;
-            }
-        }
-
-        public int Y
-        {
-            get
-            {
-                return y;
-            }
-            set
-            {
-                y = value;
-            }
-        }
-
-        public bool isInside(int xP, int yP)
-        {
-            return Math.Abs(xP - x) <= photo.Width / 2 && Math.Abs(yP - y) <= photo.Height / 2;
-        }
-        
-        public void CreatCow(int id,int Cx,int Cy)
-        {
+        {          
             x = Cx;
             y = Cy;
-            photo.Location = new Point(x, y);
+            img = MainProject.Properties.Resources.cow2_removebg_preview1;
+            img = resizeImage(img, new Size(50, 50));
         }
 
+        public override Image resizeImage(Image imgToResize, Size size)
+        {
+            return (Image)(new Bitmap(imgToResize, size));
+        }
 
-        //internal void photo_Click(object sender, EventArgs e)
-        //{
-        //    throw new NotImplementedException();
-        //}
-        //internal int photo_Click(object sender, EventArgs e)
-        //{
-        //    return this.numOfProduct;
-        //}
+        public override bool IsInside(int xP, int yP)
+        {
+            return Math.Abs(xP - x) <= img.Width / 2 && Math.Abs(yP - y) <= img.Height / 2;
+        }
+        public override void Draw(Graphics g)
+        {
+            g.DrawImage(img, x - img.Width / 2, y - img.Height / 2) ;
+        }
     }
 
 

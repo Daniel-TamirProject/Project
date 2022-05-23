@@ -9,66 +9,36 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 namespace MainProject
 {
-    class product
+    public abstract class Product
     {
         public int type;
         public int numOfProduct;
         Timer lifeTime;
+        public Image img;
+        public int x, y;
 
-
-        public product()
+        public Product()
         {
             numOfProduct = 0;
             type = 0;
-
             lifeTime = new Timer();
             lifeTime.Start();
         }
 
-        public product(int typ,int id)
+        public Product(int typ,int id)
         {
+            x = 0;
+            y = 0;
             numOfProduct = id;
             type = typ;
-
             lifeTime = new Timer();
             lifeTime.Start();
-        }
-        public int Type
-        {
-            get
-            {
-                return type;
-            }
-            set
-            {
-                type = value;
-            }
+            //img = new Bitmap(img, new Size(10,10));
+            //img = resizeImage(img, new Size(50, 50));
         }
 
-        public int NumOfProduct
-        {
-            get
-            {
-                return numOfProduct;
-            }
-            set
-            {
-                numOfProduct = value;
-            }
-        }
-
-        public Timer LifeTime
-        {
-            get
-            {
-                return lifeTime;
-            }
-            set
-            {
-                lifeTime = value;
-            }
-        }
-
-
+        public abstract Image resizeImage(Image imgToResize, Size size);
+        public abstract bool IsInside(int xP, int yP);
+        public abstract void Draw(Graphics g);
     }
 }

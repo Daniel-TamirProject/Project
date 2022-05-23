@@ -13,76 +13,33 @@ namespace MainProject
 {
     class Chicken : Animal
     {
-        //public static int numberOfCow;
-        public PictureBox photo;
-        public int x, y;
-
         public Chicken(int id) : base(1, id)
         {
-            photo = new PictureBox();
 
-            photo.Name = "chicken";
-            photo.Width = 50;
-            photo.Height = 50;
-
-            photo.Image = MainProject.Properties.Resources.chicken2_removebg_preview;
-            photo.SizeMode = PictureBoxSizeMode.StretchImage;
+            img = MainProject.Properties.Resources.chicken2_removebg_preview1;
+            img = resizeImage(img, new Size(50, 50));
         }
 
         public Chicken(int id, int Cx, int Cy) : base(1, id)
         {
-            photo = new PictureBox();
-
-            photo.Name = "chicken";
-            photo.Width = 50;
-            photo.Height = 50;
-
-            photo.Image = MainProject.Properties.Resources.chicken2_removebg_preview;
-            photo.SizeMode = PictureBoxSizeMode.StretchImage;
-
-            x = Cx - photo.Width / 2;
-            y = Cy - photo.Height / 2;
-            photo.Location = new Point(x, y);
+            x = Cx;
+            y = Cy;
+            img = MainProject.Properties.Resources.chicken2_removebg_preview1;
+            img = resizeImage(img, new Size(50, 50));
         }
 
-        public PictureBox Photo
+        public override Image resizeImage(Image imgToResize, Size size)
         {
-            get
-            {
-                return photo;
-            }
-            set
-            {
-                photo = value;
-            }
-        }
-        public int X
-        {
-            get
-            {
-                return x;
-            }
-            set
-            {
-                x = value;
-            }
+            return (Image)(new Bitmap(imgToResize, size));
         }
 
-        public int Y
+        public override bool IsInside(int xP, int yP)
         {
-            get
-            {
-                return y;
-            }
-            set
-            {
-                y = value;
-            }
+            return Math.Abs(xP - x) <= img.Width / 2 && Math.Abs(yP - y) <= img.Height / 2;
         }
-
-        public bool isInside(int xP, int yP)
+        public override void Draw(Graphics g)
         {
-            return Math.Abs(xP - x) <= photo.Width / 2 && Math.Abs(yP - y) <= photo.Height / 2;
+            g.DrawImage(img, x - img.Width / 2, y - img.Height / 2);
         }
     }
 }
