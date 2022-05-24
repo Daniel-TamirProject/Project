@@ -31,7 +31,13 @@ namespace MainProject
         {
             return (Image)(new Bitmap(imgToResize, size));
         }
-        public override void Draw(Graphics g) { }
+        public override void Draw(Graphics g)
+        {
+            countDown.Location = new Point(this.x / 2, (this.y / 2) + 20);
+            countDown.Text = "123";
+            countDown.Visible = true;
+            countDown.BringToFront();
+        }
         ~Animal()
         {
             numberOfAnimals--;
