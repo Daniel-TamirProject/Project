@@ -24,6 +24,7 @@ namespace MainProject
             type = 0;
             lifeTime = new Timer();
             lifeTime.Start();
+            
         }
 
         public Product(int typ) // type: Animal = 1, Plant = 2
@@ -36,9 +37,8 @@ namespace MainProject
             countDown.BackColor = Color.Transparent;
             countDown.Text = "123";
             countDown.Visible = true;
-            //countDown.BringToFront();
             
-
+            
             type = typ;
             lifeTime = new Timer();
             lifeTime.Start();
