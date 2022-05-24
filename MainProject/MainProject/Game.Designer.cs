@@ -93,7 +93,7 @@ namespace MainProject
             this.pictureBox1.Image = global::MainProject.Properties.Resources.grassBackground2;
             this.pictureBox1.Location = new System.Drawing.Point(0, -2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(726, 403);
+            this.pictureBox1.Size = new System.Drawing.Size(700, 400);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;

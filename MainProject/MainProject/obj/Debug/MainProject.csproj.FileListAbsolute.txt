@@ -31,3 +31,14 @@ C:\Users\Tamir\Documents\GitHub\Project\MainProject\MainProject\obj\Debug\MainPr
 C:\Users\Tamir\Documents\GitHub\Project\MainProject\MainProject\obj\Debug\MainProject.csproj.CoreCompileInputs.cache
 C:\Users\Tamir\Documents\GitHub\Project\MainProject\MainProject\obj\Debug\MainProject.exe
 C:\Users\Tamir\Documents\GitHub\Project\MainProject\MainProject\obj\Debug\MainProject.pdb
+C:\Users\libxp\Documents\GitHub\Project\MainProject\MainProject\bin\Debug\MainProject.exe.config
+C:\Users\libxp\Documents\GitHub\Project\MainProject\MainProject\bin\Debug\MainProject.exe
+C:\Users\libxp\Documents\GitHub\Project\MainProject\MainProject\bin\Debug\MainProject.pdb
+C:\Users\libxp\Documents\GitHub\Project\MainProject\MainProject\obj\Debug\MainProject.csprojAssemblyReference.cache
+C:\Users\libxp\Documents\GitHub\Project\MainProject\MainProject\obj\Debug\MainProject.HomePage.resources
+C:\Users\libxp\Documents\GitHub\Project\MainProject\MainProject\obj\Debug\MainProject.Game.resources
+C:\Users\libxp\Documents\GitHub\Project\MainProject\MainProject\obj\Debug\MainProject.Properties.Resources.resources
+C:\Users\libxp\Documents\GitHub\Project\MainProject\MainProject\obj\Debug\MainProject.csproj.GenerateResource.cache
+C:\Users\libxp\Documents\GitHub\Project\MainProject\MainProject\obj\Debug\MainProject.csproj.CoreCompileInputs.cache
+C:\Users\libxp\Documents\GitHub\Project\MainProject\MainProject\obj\Debug\MainProject.exe
+C:\Users\libxp\Documents\GitHub\Project\MainProject\MainProject\obj\Debug\MainProject.pdb
