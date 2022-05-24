@@ -23,6 +23,7 @@ namespace MainProject
             img = MainProject.Properties.Resources.tree_removebg_preview;
             img = resizeImage(img, new Size(65, 65));
             generationSpeed = 4;
+            countDown.Location = new Point(x - 12, y - 50);
         }
 
         public override Image resizeImage(Image imgToResize, Size size)

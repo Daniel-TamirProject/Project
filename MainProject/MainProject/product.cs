@@ -31,10 +31,14 @@ namespace MainProject
             x = 0;
             y = 0;
             countDown = new Label();
-            countDown.Location = new Point(this.x / 2, (this.y / 2) + 20);
+            countDown.Location = new Point(x - 12, y - 50);
+            countDown.Size = new Size(30, 20);
+            countDown.BackColor = Color.Transparent;
             countDown.Text = "123";
             countDown.Visible = true;
-            countDown.BringToFront();
+            //countDown.BringToFront();
+            
+
             type = typ;
             lifeTime = new Timer();
             lifeTime.Start();
