@@ -131,7 +131,7 @@ namespace MainProject
             // shipPic
             // 
             this.shipPic.BackColor = System.Drawing.Color.Transparent;
-            this.shipPic.Image = global::MainProject.Properties.Resources.ship_removebg_preview1;
+           // this.shipPic.Image = global::MainProject.Properties.Resources.ship_removebg_preview1;
             this.shipPic.Location = new System.Drawing.Point(989, 169);
             this.shipPic.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.shipPic.Name = "shipPic";
@@ -139,7 +139,7 @@ namespace MainProject
             this.shipPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.shipPic.TabIndex = 5;
             this.shipPic.TabStop = false;
-            this.shipPic.Click += new System.EventHandler(this.shipPic_Click);
+           // this.shipPic.Click += new System.EventHandler(this.shipPic_Click);
             // 
             // ChickenPic
             // 
