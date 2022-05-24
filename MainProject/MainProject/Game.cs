@@ -9,6 +9,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using System.IO;
+using System.Runtime.Serialization;//!!!!!!
+using System.Runtime.Serialization.Formatters.Binary;
+
 namespace MainProject
 {
     public partial class Game : Form
@@ -101,6 +105,7 @@ namespace MainProject
                 {
                     futureBorn = getNewProduct(flag, e.X, e.Y);
                     products.Add(futureBorn);
+                    pictureBox1.Controls.Add(futureBorn.countDown);
                     animalCounter.Text = "Animals: " + Animal.numberOfAnimals;
                     plantCounter.Text = "Plants: " + Plant.numberOfPlants;
                     pictureBox1.Invalidate();
@@ -144,13 +149,31 @@ namespace MainProject
             progressBar1.PerformStep();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+            saveFileDialog1.InitialDirectory = Directory.GetCurrentDirectory();// + "..\\myModels";
+            saveFileDialog1.Filter = "model files (*.mdl)|*.mdl|All files (*.*)|*.*";
+            saveFileDialog1.FilterIndex = 1;
+            saveFileDialog1.RestoreDirectory = true;
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                IFormatter formatter = new BinaryFormatter();
+                using (Stream stream = new FileStream(saveFileDialog1.FileName, FileMode.Create, FileAccess.Write, FileShare.None))
+                {
+                    //!!!!
+                    formatter.Serialize(stream, products);
+                }
+            }
+        }
+
         private void pictureBox1_Paint(object sender, PaintEventArgs e)
         {
             for(int i=0;i<products.Count;i++)
             {
                 products[i].Draw(e.Graphics);
-                pictureBox1.Controls.Add(products[i].countDown);
-                products[i].countDown.BringToFront();
+                
+               // products[i].countDown.BringToFront();
             }
         }
     }

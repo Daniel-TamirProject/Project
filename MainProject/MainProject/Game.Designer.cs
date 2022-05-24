@@ -91,7 +91,7 @@ namespace MainProject
             // progressBar1
             // 
             this.progressBar1.Location = new System.Drawing.Point(189, 522);
-            this.progressBar1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.progressBar1.Margin = new System.Windows.Forms.Padding(4);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(123, 28);
             this.progressBar1.TabIndex = 11;
@@ -100,18 +100,19 @@ namespace MainProject
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(965, 344);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(89, 37);
             this.button1.TabIndex = 13;
             this.button1.Text = "Save";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.button2.Location = new System.Drawing.Point(965, 389);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(89, 36);
             this.button2.TabIndex = 14;
@@ -154,7 +155,7 @@ namespace MainProject
             // progressBar2
             // 
             this.progressBar2.Location = new System.Drawing.Point(320, 522);
-            this.progressBar2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.progressBar2.Margin = new System.Windows.Forms.Padding(4);
             this.progressBar2.Name = "progressBar2";
             this.progressBar2.Size = new System.Drawing.Size(123, 28);
             this.progressBar2.TabIndex = 17;
@@ -173,7 +174,7 @@ namespace MainProject
             // progressBar3
             // 
             this.progressBar3.Location = new System.Drawing.Point(732, 522);
-            this.progressBar3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.progressBar3.Margin = new System.Windows.Forms.Padding(4);
             this.progressBar3.Name = "progressBar3";
             this.progressBar3.Size = new System.Drawing.Size(123, 28);
             this.progressBar3.TabIndex = 21;
@@ -192,7 +193,7 @@ namespace MainProject
             // progressBar4
             // 
             this.progressBar4.Location = new System.Drawing.Point(601, 522);
-            this.progressBar4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.progressBar4.Margin = new System.Windows.Forms.Padding(4);
             this.progressBar4.Name = "progressBar4";
             this.progressBar4.Size = new System.Drawing.Size(123, 28);
             this.progressBar4.TabIndex = 19;
@@ -200,7 +201,7 @@ namespace MainProject
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(951, 511);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(100, 28);
             this.button3.TabIndex = 23;
@@ -267,7 +268,7 @@ namespace MainProject
             this.pictureBox1.Location = new System.Drawing.Point(1, 1);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(933, 492);
+            this.pictureBox1.Size = new System.Drawing.Size(945, 492);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
@@ -303,7 +304,7 @@ namespace MainProject
             this.Controls.Add(this.CowPic);
             this.Controls.Add(this.animalCounter);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Game";
             this.Text = "Game";
             ((System.ComponentModel.ISupportInitialize)(this.treePic)).EndInit();
