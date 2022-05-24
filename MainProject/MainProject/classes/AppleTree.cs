@@ -9,24 +9,25 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
-namespace MainProject
+namespace MainProject.classes
 {
-    class Corn : Plant
+    [Serializable]
+    class AppleTree:Plant
     {
-
-        public Corn() : base(2) // Kind = 2 = Corn
+        
+        public AppleTree() : base(1) // Kind = 1 = Apple
         {
-            img = MainProject.Properties.Resources.adama_removebg_preview1;
+            img = MainProject.Properties.Resources.tree_removebg_preview;
             img = resizeImage(img, new Size(65, 65));
-            generationSpeed = 3;
+            generationSpeed = 4;
         }
-        public Corn(int Cx, int Cy) : base(2) // Kind = 2 = Corn
+        public AppleTree(int Cx, int Cy) : base(1) // Kind = 1 = Apple
         {
             x = Cx;
             y = Cy;
-            img = MainProject.Properties.Resources.adama_removebg_preview1;
+            img = MainProject.Properties.Resources.tree_removebg_preview;
             img = resizeImage(img, new Size(65, 65));
-            generationSpeed = 3;
+            generationSpeed = 4;
             //countDown.Location = new Point(x - 12, y - 50);
             resizelable(countDown);
         }
@@ -44,10 +45,9 @@ namespace MainProject
         {
             g.DrawImage(img, x - img.Width / 2, y - img.Height / 2);
         }
-
         public override void resizelable(Label countdown)
         {
-            countdown.Location = new Point(x - 12, y - 35);
+            countdown.Location = new Point(x - 12, y - 40);
         }
     }
 

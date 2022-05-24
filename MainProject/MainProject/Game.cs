@@ -8,17 +8,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Runtime.InteropServices;
 using System.IO;
 using System.Runtime.Serialization;//!!!!!!
-using System.Runtime.Serialization.Formatters.Binary; 
+using System.Runtime.Serialization.Formatters.Binary;
+using MainProject.classes;
 
 namespace MainProject
 {
     [Serializable]
     public partial class Game : Form
     {
-        List<Product> products = new List<Product>();
+       public List<Product> products = new List<Product>();
         Product futureBorn;
 
         int flag = 1, index=-1;
@@ -152,9 +153,34 @@ namespace MainProject
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //Stream myStream;
+            //SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+
+            //saveFileDialog1.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+            //saveFileDialog1.FilterIndex = 2;
+            //saveFileDialog1.RestoreDirectory = true;
+
+            //if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            //{
+            //    if ((myStream = saveFileDialog1.OpenFile()) != null)
+            //    {
+            //        // Code to write the stream goes here.
+            //        IFormatter formatter = new BinaryFormatter();
+            //        using (Stream stream = new FileStream(saveFileDialog1.FileName, FileMode.Create, FileAccess.Write, FileShare.None))
+            //        {
+            //            //!!!!
+            //            formatter.Serialize(stream, products);
+            //        }
+            //        myStream.Close();
+            //    }
+            //}
+
+
             SaveFileDialog saveFileDialog1 = new SaveFileDialog();
-            saveFileDialog1.InitialDirectory = Directory.GetCurrentDirectory();// + "..\\myModels";
+            saveFileDialog1.InitialDirectory = @"Desktop";
+            //saveFileDialog1.InitialDirectory = Directory.GetCurrentDirectory();// + "..\\myModels";
             saveFileDialog1.Filter = "model files (*.mdl)|*.mdl|All files (*.*)|*.*";
+            //saveFileDialog1.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
             saveFileDialog1.FilterIndex = 1;
             saveFileDialog1.RestoreDirectory = true;
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
@@ -163,7 +189,9 @@ namespace MainProject
                 using (Stream stream = new FileStream(saveFileDialog1.FileName, FileMode.Create, FileAccess.Write, FileShare.None))
                 {
                     //!!!!
-                    formatter.Serialize(stream, products);
+                    BinaryFormatter bin = new BinaryFormatter();
+                    bin.Serialize(stream, products);
+                    //formatter.Serialize(stream, products);
                 }
             }
         }
@@ -173,7 +201,7 @@ namespace MainProject
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
             openFileDialog1.InitialDirectory = Directory.GetCurrentDirectory();// + "..\\myModels";
             openFileDialog1.Filter = "model files (*.mdl)|*.mdl|All files (*.*)|*.*";
-            openFileDialog1.FilterIndex = 1;
+            openFileDialog1.FilterIndex = 2;
             openFileDialog1.RestoreDirectory = true;
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {

@@ -32,5 +32,10 @@ namespace MainProject
             form2.ShowDialog();
             this.Close();
         }
+
+        private void HomePage_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

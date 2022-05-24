@@ -9,27 +9,26 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
-namespace MainProject
-{
-    [Serializable]
-    public class Chicken : Animal
+namespace MainProject.classes
+{ 
+      [Serializable]
+    class Corn : Plant
     {
-        public Chicken() : base(2) // Breed = 2 = Chicken
+
+        public Corn() : base(2) // Kind = 2 = Corn
         {
-
-            img = MainProject.Properties.Resources.chicken2_removebg_preview1;
-            img = resizeImage(img, new Size(30, 30));
-            generationSpeed = 4;
+            img = MainProject.Properties.Resources.adama_removebg_preview1;
+            img = resizeImage(img, new Size(65, 65));
+            generationSpeed = 3;
         }
-
-        public Chicken(int Cx, int Cy) : base(2) // Breed = 2 = Chicken
+        public Corn(int Cx, int Cy) : base(2) // Kind = 2 = Corn
         {
             x = Cx;
             y = Cy;
-            img = MainProject.Properties.Resources.chicken2_removebg_preview1;
-            img = resizeImage(img, new Size(30, 30));
-            generationSpeed = 4;
-            //countDown.Location = new Point(x - 12, y - 35);
+            img = MainProject.Properties.Resources.adama_removebg_preview1;
+            img = resizeImage(img, new Size(65, 65));
+            generationSpeed = 3;
+            //countDown.Location = new Point(x - 12, y - 50);
             resizelable(countDown);
         }
 
@@ -46,9 +45,14 @@ namespace MainProject
         {
             g.DrawImage(img, x - img.Width / 2, y - img.Height / 2);
         }
+
         public override void resizelable(Label countdown)
         {
-            countdown.Location = new Point(x - 12, y - 30);
+            countdown.Location = new Point(x - 12, y - 35);
         }
     }
+
+
+
+
 }

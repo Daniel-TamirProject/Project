@@ -8,8 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MainProject
+namespace MainProject.classes
 {
+    [Serializable]
     class Plant : Product
     {
         public int kind; //{ 1 = Cow, 2 = Chicken }

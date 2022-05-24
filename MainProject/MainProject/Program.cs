@@ -6,6 +6,7 @@ using System.Windows.Forms;
 
 namespace MainProject
 {
+    [Serializable]
     static class Program
     {
         /// <summary>

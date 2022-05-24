@@ -9,25 +9,27 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
-namespace MainProject
+namespace MainProject.classes
 {
-    class AppleTree:Plant
+    [Serializable]
+    public class Chicken : Animal
     {
-        
-        public AppleTree() : base(1) // Kind = 1 = Apple
+        public Chicken() : base(2) // Breed = 2 = Chicken
         {
-            img = MainProject.Properties.Resources.tree_removebg_preview;
-            img = resizeImage(img, new Size(65, 65));
+
+            img = MainProject.Properties.Resources.chicken2_removebg_preview1;
+            img = resizeImage(img, new Size(30, 30));
             generationSpeed = 4;
         }
-        public AppleTree(int Cx, int Cy) : base(1) // Kind = 1 = Apple
+
+        public Chicken(int Cx, int Cy) : base(2) // Breed = 2 = Chicken
         {
             x = Cx;
             y = Cy;
-            img = MainProject.Properties.Resources.tree_removebg_preview;
-            img = resizeImage(img, new Size(65, 65));
+            img = MainProject.Properties.Resources.chicken2_removebg_preview1;
+            img = resizeImage(img, new Size(30, 30));
             generationSpeed = 4;
-            //countDown.Location = new Point(x - 12, y - 50);
+            //countDown.Location = new Point(x - 12, y - 35);
             resizelable(countDown);
         }
 
@@ -46,11 +48,7 @@ namespace MainProject
         }
         public override void resizelable(Label countdown)
         {
-            countdown.Location = new Point(x - 12, y - 40);
+            countdown.Location = new Point(x - 12, y - 30);
         }
     }
-
-
-
-
 }
