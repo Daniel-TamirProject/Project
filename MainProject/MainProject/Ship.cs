@@ -16,7 +16,7 @@ namespace MainProject
         public Ship(int id) : base(1, id)
         {
             img = MainProject.Properties.Resources.ship_removebg_preview1;
-            img = resizeImage(img, new Size(50, 50));
+            img = resizeImage(img, new Size(25, 25));
         }
 
         public Ship(int id, int Cx, int Cy) : base(1, id)
@@ -24,7 +24,7 @@ namespace MainProject
             x = Cx;
             y = Cy;
             img = MainProject.Properties.Resources.ship_removebg_preview1;
-            img = resizeImage(img, new Size(50, 50));
+            img = resizeImage(img, new Size(30, 30));
         }
         public override Image resizeImage(Image imgToResize, Size size)
         {

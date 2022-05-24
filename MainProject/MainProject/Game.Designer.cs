@@ -79,7 +79,7 @@ namespace MainProject
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::MainProject.Properties.Resources.grassBackground2;
+            this.pictureBox1.Image = global::MainProject.Properties.Resources.backGround2;
             this.pictureBox1.Location = new System.Drawing.Point(0, -2);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";

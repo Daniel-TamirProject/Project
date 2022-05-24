@@ -17,7 +17,7 @@ namespace MainProject
         {
 
             img = MainProject.Properties.Resources.chicken2_removebg_preview1;
-            img = resizeImage(img, new Size(40, 40));
+            img = resizeImage(img, new Size(20, 20));
         }
 
         public Chicken(int id, int Cx, int Cy) : base(1, id)
@@ -25,7 +25,7 @@ namespace MainProject
             x = Cx;
             y = Cy;
             img = MainProject.Properties.Resources.chicken2_removebg_preview1;
-            img = resizeImage(img, new Size(40, 40));
+            img = resizeImage(img, new Size(25, 25));
         }
 
         public override Image resizeImage(Image imgToResize, Size size)

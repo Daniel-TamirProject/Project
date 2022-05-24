@@ -83,6 +83,26 @@ namespace MainProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap backGround {
+            get {
+                object obj = ResourceManager.GetObject("backGround", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap backGround2 {
+            get {
+                object obj = ResourceManager.GetObject("backGround2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap chicken2_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("chicken2-removebg-preview", resourceCulture);

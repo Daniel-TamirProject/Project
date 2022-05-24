@@ -22,7 +22,7 @@ namespace MainProject
             x = Cx;
             y = Cy;
             img = MainProject.Properties.Resources.cow2_removebg_preview1;
-            img = resizeImage(img, new Size(65, 65));
+            img = resizeImage(img, new Size(40, 40));
         }
 
         public override Image resizeImage(Image imgToResize, Size size)
