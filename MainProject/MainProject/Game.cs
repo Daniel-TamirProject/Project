@@ -101,10 +101,11 @@ namespace MainProject
                 {
                     futureBorn = getNewProduct(flag, e.X, e.Y);
                     products.Add(futureBorn);
+                    pictureBox1.Controls.Add(futureBorn.countDown);
+                    futureBorn.countDown.Text = "2";
                     animalCounter.Text = "Animals: " + Animal.numberOfAnimals;
                     plantCounter.Text = "Plants: " + Plant.numberOfPlants;
                     pictureBox1.Invalidate();
-
                 }
             }
         }
@@ -149,7 +150,6 @@ namespace MainProject
             for(int i=0;i<products.Count;i++)
             {
                 products[i].Draw(e.Graphics);
-                pictureBox1.Controls.Add(products[i].countDown);
             }
         }
     }

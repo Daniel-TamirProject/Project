@@ -26,11 +26,6 @@ namespace MainProject
             img = resizeImage(img, new Size(40, 40));
             generationSpeed = 2;
             resizelable(countDown);
-            //countDown.Location = new Point(x - 12, y - 35);
-            
-            //countDown.Text = "123";
-            //countDown.Visible = true;
-            //countDown.BringToFront();
         }
 
         public override Image resizeImage(Image imgToResize, Size size)
@@ -51,8 +46,6 @@ namespace MainProject
         {
             countdown.Location = new Point(x - 12, y - 35);
         }
+        public void StartTimer() {}
     }
-
-
-    
 }
