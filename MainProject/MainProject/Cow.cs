@@ -15,7 +15,7 @@ namespace MainProject
         public Cow() : base(1) // Breed = 1 = Cow
         {
             img = MainProject.Properties.Resources.cow2_removebg_preview1;
-            img = resizeImage(img, new Size(65, 65));
+            img = resizeImage(img, new Size(40, 40));
             generationSpeed = 2;
         }
         public Cow(int Cx,int Cy) : base(1) // Breed = 1 = Cow
@@ -23,9 +23,9 @@ namespace MainProject
             x = Cx;
             y = Cy;
             img = MainProject.Properties.Resources.cow2_removebg_preview1;
-            img = resizeImage(img, new Size(65, 65));
+            img = resizeImage(img, new Size(40, 40));
             generationSpeed = 2;
-            countDown.Location = new Point(x - 12, y - 50);
+            countDown.Location = new Point(x - 12, y - 35);
             
             //countDown.Text = "123";
             //countDown.Visible = true;

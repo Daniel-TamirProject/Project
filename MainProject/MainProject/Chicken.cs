@@ -17,7 +17,7 @@ namespace MainProject
         {
 
             img = MainProject.Properties.Resources.chicken2_removebg_preview1;
-            img = resizeImage(img, new Size(40, 40));
+            img = resizeImage(img, new Size(30, 30));
             generationSpeed = 4;
         }
 
@@ -26,9 +26,9 @@ namespace MainProject
             x = Cx;
             y = Cy;
             img = MainProject.Properties.Resources.chicken2_removebg_preview1;
-            img = resizeImage(img, new Size(40, 40));
+            img = resizeImage(img, new Size(30, 30));
             generationSpeed = 4;
-            countDown.Location = new Point(x - 12, y - 50);
+            countDown.Location = new Point(x - 12, y - 35);
         }
 
         public override Image resizeImage(Image imgToResize, Size size)

@@ -31,7 +31,7 @@ namespace MainProject
             x = 0;
             y = 0;
             countDown = new Label();
-            countDown.Location = new Point(x - 12, y - 50);
+            countDown.Location = new Point(x - 12, y - 30);
             countDown.Size = new Size(30, 20);
             countDown.BackColor = Color.Transparent;
             countDown.Text = "123";

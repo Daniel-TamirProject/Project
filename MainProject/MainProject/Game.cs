@@ -116,7 +116,7 @@ namespace MainProject
                 Product p = (Product)products[index];
                 p.x = e.X;
                 p.y = e.Y;
-                p.countDown.Location = new Point(p.x - 12, p.y - 50);
+                p.countDown.Location = new Point(p.x - 12, p.y - 35);
                 p.countDown.BringToFront();
                 
                 pictureBox1.Invalidate();
