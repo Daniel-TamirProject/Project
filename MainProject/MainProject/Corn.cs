@@ -23,6 +23,7 @@ namespace MainProject
             img = MainProject.Properties.Resources.adama_removebg_preview1;
             img = resizeImage(img, new Size(65, 65));
             generationSpeed = 3;
+            countDown.Location = new Point(x - 12, y - 50);
         }
 
         public override Image resizeImage(Image imgToResize, Size size)

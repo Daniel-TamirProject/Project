@@ -116,7 +116,9 @@ namespace MainProject
                 Product p = (Product)products[index];
                 p.x = e.X;
                 p.y = e.Y;
-                p.countDown.Location = new Point(p.x, p.y + 20);
+                p.countDown.Location = new Point(p.x - 12, p.y - 50);
+                p.countDown.BringToFront();
+                
                 pictureBox1.Invalidate();
             }
         }
@@ -147,6 +149,7 @@ namespace MainProject
             {
                 products[i].Draw(e.Graphics);
                 pictureBox1.Controls.Add(products[i].countDown);
+                products[i].countDown.BringToFront();
             }
         }
     }

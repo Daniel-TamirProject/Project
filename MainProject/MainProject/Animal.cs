@@ -33,10 +33,6 @@ namespace MainProject
         }
         public override void Draw(Graphics g)
         {
-            countDown.Location = new Point(this.x / 2, (this.y / 2) + 20);
-            countDown.Text = "123";
-            countDown.Visible = true;
-            countDown.BringToFront();
         }
         ~Animal()
         {
