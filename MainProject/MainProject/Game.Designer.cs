@@ -33,8 +33,8 @@ namespace MainProject
             this.animal = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.Savebtn = new System.Windows.Forms.Button();
+            this.Loadbtn = new System.Windows.Forms.Button();
             this.plantCounter = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -96,28 +96,29 @@ namespace MainProject
             this.progressBar1.Size = new System.Drawing.Size(123, 28);
             this.progressBar1.TabIndex = 11;
             // 
-            // button1
+            // Savebtn
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(965, 344);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(89, 37);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Save";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.Savebtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Savebtn.Location = new System.Drawing.Point(965, 344);
+            this.Savebtn.Margin = new System.Windows.Forms.Padding(4);
+            this.Savebtn.Name = "Savebtn";
+            this.Savebtn.Size = new System.Drawing.Size(89, 37);
+            this.Savebtn.TabIndex = 13;
+            this.Savebtn.Text = "Save";
+            this.Savebtn.UseVisualStyleBackColor = true;
+            this.Savebtn.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // Loadbtn
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button2.Location = new System.Drawing.Point(965, 389);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(89, 36);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "Load";
-            this.button2.UseVisualStyleBackColor = true;
+            this.Loadbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.Loadbtn.Location = new System.Drawing.Point(965, 389);
+            this.Loadbtn.Margin = new System.Windows.Forms.Padding(4);
+            this.Loadbtn.Name = "Loadbtn";
+            this.Loadbtn.Size = new System.Drawing.Size(89, 36);
+            this.Loadbtn.TabIndex = 14;
+            this.Loadbtn.Text = "Load";
+            this.Loadbtn.UseVisualStyleBackColor = true;
+            this.Loadbtn.Click += new System.EventHandler(this.Loadbtn_Click);
             // 
             // plantCounter
             // 
@@ -293,8 +294,8 @@ namespace MainProject
             this.Controls.Add(this.progressBar2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.plantCounter);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Loadbtn);
+            this.Controls.Add(this.Savebtn);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.treePic);
             this.Controls.Add(this.adamaPic);
@@ -327,8 +328,8 @@ namespace MainProject
         private System.Windows.Forms.PictureBox treePic;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ProgressBar progressBar1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button Savebtn;
+        private System.Windows.Forms.Button Loadbtn;
         private System.Windows.Forms.Label plantCounter;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;

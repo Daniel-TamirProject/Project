@@ -7,8 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 namespace MainProject
 {
+    [Serializable]
     public abstract class Product
     {
         public int type;

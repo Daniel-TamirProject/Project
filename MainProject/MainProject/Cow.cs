@@ -10,12 +10,13 @@ using System.Windows.Forms;
 
 namespace MainProject
 {
-    class Cow:Animal
+    [Serializable]
+    public class Cow:Animal
     {
         public Cow() : base(1) // Breed = 1 = Cow
         {
             img = MainProject.Properties.Resources.cow2_removebg_preview1;
-            img = resizeImage(img, new Size(40, 40));
+            img = resizeImage(img, new Size(45, 45));
             generationSpeed = 2;
         }
         public Cow(int Cx,int Cy) : base(1) // Breed = 1 = Cow
@@ -23,7 +24,7 @@ namespace MainProject
             x = Cx;
             y = Cy;
             img = MainProject.Properties.Resources.cow2_removebg_preview1;
-            img = resizeImage(img, new Size(40, 40));
+            img = resizeImage(img, new Size(45, 45));
             generationSpeed = 2;
             resizelable(countDown);
             //countDown.Location = new Point(x - 12, y - 35);

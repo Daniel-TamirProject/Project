@@ -11,7 +11,8 @@ using System.Windows.Forms;
 
 namespace MainProject
 {
-    class Chicken : Animal
+    [Serializable]
+    public class Chicken : Animal
     {
         public Chicken() : base(2) // Breed = 2 = Chicken
         {

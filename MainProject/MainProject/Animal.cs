@@ -10,7 +10,8 @@ using System.Windows.Forms;
 
 namespace MainProject
 {
-    class Animal : Product
+    [Serializable]
+    public class Animal : Product
     {   
         public int breed; //{ 1 = Cow, 2 = Chicken }
         public static int numberOfAnimals = 0;

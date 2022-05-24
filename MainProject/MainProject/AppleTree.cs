@@ -1,9 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+
 
 namespace MainProject
 {
@@ -23,7 +27,8 @@ namespace MainProject
             img = MainProject.Properties.Resources.tree_removebg_preview;
             img = resizeImage(img, new Size(65, 65));
             generationSpeed = 4;
-            countDown.Location = new Point(x - 12, y - 50);
+            //countDown.Location = new Point(x - 12, y - 50);
+            resizelable(countDown);
         }
 
         public override Image resizeImage(Image imgToResize, Size size)
@@ -38,6 +43,10 @@ namespace MainProject
         public override void Draw(Graphics g)
         {
             g.DrawImage(img, x - img.Width / 2, y - img.Height / 2);
+        }
+        public override void resizelable(Label countdown)
+        {
+            countdown.Location = new Point(x - 12, y - 40);
         }
     }
 

@@ -11,10 +11,11 @@ using System.Windows.Forms;
 
 using System.IO;
 using System.Runtime.Serialization;//!!!!!!
-using System.Runtime.Serialization.Formatters.Binary;
+using System.Runtime.Serialization.Formatters.Binary; 
 
 namespace MainProject
 {
+    [Serializable]
     public partial class Game : Form
     {
         List<Product> products = new List<Product>();
@@ -167,13 +168,28 @@ namespace MainProject
             }
         }
 
+        private void Loadbtn_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+            openFileDialog1.InitialDirectory = Directory.GetCurrentDirectory();// + "..\\myModels";
+            openFileDialog1.Filter = "model files (*.mdl)|*.mdl|All files (*.*)|*.*";
+            openFileDialog1.FilterIndex = 1;
+            openFileDialog1.RestoreDirectory = true;
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                Stream stream = File.Open(openFileDialog1.FileName, FileMode.Open);
+                var binaryFormatter = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
+                //!!!!
+                products = (List<Product>)binaryFormatter.Deserialize(stream);
+                pictureBox1.Invalidate();
+            }
+        }
+
         private void pictureBox1_Paint(object sender, PaintEventArgs e)
         {
             for(int i=0;i<products.Count;i++)
             {
                 products[i].Draw(e.Graphics);
-                
-               // products[i].countDown.BringToFront();
             }
         }
     }

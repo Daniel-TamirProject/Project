@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace MainProject
 {
+    [Serializable]
     public partial class HomePage : Form
     {
         public HomePage()
