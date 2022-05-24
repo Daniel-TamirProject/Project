@@ -28,11 +28,6 @@ namespace MainProject.classes
             generationSpeed = 2;
             count = 10;
             countDown = count.ToString();
-            //countDown.Location = new Point(x - 12, y - 35);
-            
-            //countDown.Text = "123";
-            //countDown.Visible = true;
-            //countDown.BringToFront();
         }
 
         public override Image resizeImage(Image imgToResize, Size size)
@@ -46,15 +41,7 @@ namespace MainProject.classes
         }
         public override void Draw(Graphics g)
         {
-            //Font = new Font(fontFamily,)
             g.DrawImage(img, x - img.Width / 2, y - img.Height / 2) ;
-            //g.DrawString(countDown, FontFamily., Brushes.Pink, new Point(x,y));
-
-        }
-
-        public override void resizelable(Label countdown)
-        {
-            countdown.Location = new Point(x - 12, y - 35);
         }
     }
 

@@ -15,21 +15,19 @@ namespace MainProject.classes
     class AppleTree:Plant
     {
         
-        public AppleTree() : base(1) // Kind = 1 = Apple
+        public AppleTree() : base(3) //type Apple = 3
         {
             img = MainProject.Properties.Resources.tree_removebg_preview;
             img = resizeImage(img, new Size(65, 65));
             generationSpeed = 4;
         }
-        public AppleTree(int Cx, int Cy) : base(1) // Kind = 1 = Apple
+        public AppleTree(int Cx, int Cy) : base(3) //type Apple = 3
         {
             x = Cx;
             y = Cy;
             img = MainProject.Properties.Resources.tree_removebg_preview;
             img = resizeImage(img, new Size(65, 65));
             generationSpeed = 4;
-            //countDown.Location = new Point(x - 12, y - 50);
-            //resizelable(countDown);
         }
 
         public override Image resizeImage(Image imgToResize, Size size)
@@ -45,13 +43,5 @@ namespace MainProject.classes
         {
             g.DrawImage(img, x - img.Width / 2, y - img.Height / 2);
         }
-        public override void resizelable(Label countdown)
-        {
-            countdown.Location = new Point(x - 12, y - 40);
-        }
     }
-
-
-
-
 }

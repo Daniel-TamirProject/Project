@@ -31,23 +31,13 @@ namespace MainProject.classes
             x = 0;
             y = 0;
             countDown = count.ToString();
-            //countDown.Location = new Point(x - 12, y - 30);
-            //countDown.Size = new Size(30, 20);
-            //countDown.BackColor = Color.Transparent;
-            //countDown.Text = "123";
-            //countDown.Visible = true;
-            //countDown.BringToFront();
-            
-
+         
             type = typ;
-            
-            
          }
 
         public abstract Image resizeImage(Image imgToResize, Size size);
         public abstract bool IsInside(int xP, int yP);
         public abstract void Draw(Graphics g);
 
-        public abstract void resizelable(Label countdown);
     }
 }

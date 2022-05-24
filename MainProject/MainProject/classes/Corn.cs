@@ -15,21 +15,19 @@ namespace MainProject.classes
     class Corn : Plant
     {
 
-        public Corn() : base(2) // Kind = 2 = Corn
+        public Corn() : base(4) // Kind = 2 = Corn
         {
             img = MainProject.Properties.Resources.adama_removebg_preview1;
             img = resizeImage(img, new Size(65, 65));
             generationSpeed = 3;
         }
-        public Corn(int Cx, int Cy) : base(2) // Kind = 2 = Corn
+        public Corn(int Cx, int Cy) : base(4) // Kind = 2 = Corn
         {
             x = Cx;
             y = Cy;
             img = MainProject.Properties.Resources.adama_removebg_preview1;
             img = resizeImage(img, new Size(65, 65));
             generationSpeed = 3;
-            //countDown.Location = new Point(x - 12, y - 50);
-            //resizelable(countDown);
         }
 
         public override Image resizeImage(Image imgToResize, Size size)
@@ -45,14 +43,5 @@ namespace MainProject.classes
         {
             g.DrawImage(img, x - img.Width / 2, y - img.Height / 2);
         }
-
-        public override void resizelable(Label countdown)
-        {
-            countdown.Location = new Point(x - 12, y - 35);
-        }
     }
-
-
-
-
 }
