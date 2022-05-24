@@ -16,6 +16,8 @@ namespace MainProject
         public Image img;
         public int x, y;
         public int generationSpeed;
+        public Label countDown;
+
 
         public Product()
         {
@@ -28,6 +30,11 @@ namespace MainProject
         {
             x = 0;
             y = 0;
+            countDown = new Label();
+            countDown.Location = new Point(this.x / 2, (this.y / 2) + 20);
+            countDown.Text = "123";
+            countDown.Visible = true;
+            countDown.BringToFront();
             type = typ;
             lifeTime = new Timer();
             lifeTime.Start();
