@@ -143,7 +143,7 @@ namespace MainProject
 
         private void pictureBox1_Paint(object sender, PaintEventArgs e)
         {
-            for(int i=0;i<products.Count;i++)
+            for (int i = 0; i < products.Count; i++)
             {
                 products[i].Draw(e.Graphics);
                 pictureBox1.Controls.Add(products[i].countDown);
