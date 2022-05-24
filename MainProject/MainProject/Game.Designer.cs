@@ -70,7 +70,7 @@ namespace MainProject
             // 
             this.animal.AutoSize = true;
             this.animal.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.animal.Location = new System.Drawing.Point(976, 0);
+            this.animal.Location = new System.Drawing.Point(964, -1);
             this.animal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.animal.Name = "animal";
             this.animal.Size = new System.Drawing.Size(87, 27);
@@ -81,7 +81,7 @@ namespace MainProject
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F);
-            this.label1.Location = new System.Drawing.Point(984, 153);
+            this.label1.Location = new System.Drawing.Point(971, 163);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 27);
@@ -99,7 +99,7 @@ namespace MainProject
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(976, 330);
+            this.button1.Location = new System.Drawing.Point(965, 344);
             this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(89, 37);
@@ -110,7 +110,7 @@ namespace MainProject
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button2.Location = new System.Drawing.Point(976, 374);
+            this.button2.Location = new System.Drawing.Point(965, 389);
             this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(89, 36);
@@ -212,7 +212,7 @@ namespace MainProject
             // 
             this.treePic.BackColor = System.Drawing.Color.Transparent;
             this.treePic.Image = global::MainProject.Properties.Resources.tree_removebg_preview;
-            this.treePic.Location = new System.Drawing.Point(989, 192);
+            this.treePic.Location = new System.Drawing.Point(976, 205);
             this.treePic.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.treePic.Name = "treePic";
             this.treePic.Size = new System.Drawing.Size(63, 48);
@@ -225,7 +225,7 @@ namespace MainProject
             // 
             this.adamaPic.BackColor = System.Drawing.Color.Transparent;
             this.adamaPic.Image = global::MainProject.Properties.Resources.adama_removebg_preview1;
-            this.adamaPic.Location = new System.Drawing.Point(989, 257);
+            this.adamaPic.Location = new System.Drawing.Point(976, 276);
             this.adamaPic.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.adamaPic.Name = "adamaPic";
             this.adamaPic.Size = new System.Drawing.Size(63, 48);
@@ -238,7 +238,7 @@ namespace MainProject
             // 
             this.ChickenPic.BackColor = System.Drawing.Color.Transparent;
             this.ChickenPic.Image = global::MainProject.Properties.Resources.chicken2_removebg_preview1;
-            this.ChickenPic.Location = new System.Drawing.Point(989, 87);
+            this.ChickenPic.Location = new System.Drawing.Point(976, 99);
             this.ChickenPic.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ChickenPic.Name = "ChickenPic";
             this.ChickenPic.Size = new System.Drawing.Size(63, 52);
@@ -251,7 +251,7 @@ namespace MainProject
             // 
             this.CowPic.BackColor = System.Drawing.Color.Transparent;
             this.CowPic.Image = global::MainProject.Properties.Resources.cow2_removebg_preview1;
-            this.CowPic.Location = new System.Drawing.Point(989, 28);
+            this.CowPic.Location = new System.Drawing.Point(976, 28);
             this.CowPic.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CowPic.Name = "CowPic";
             this.CowPic.Size = new System.Drawing.Size(63, 54);
