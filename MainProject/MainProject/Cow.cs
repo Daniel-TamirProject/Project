@@ -25,7 +25,8 @@ namespace MainProject
             img = MainProject.Properties.Resources.cow2_removebg_preview1;
             img = resizeImage(img, new Size(40, 40));
             generationSpeed = 2;
-            countDown.Location = new Point(x - 12, y - 35);
+            resizelable(countDown);
+            //countDown.Location = new Point(x - 12, y - 35);
             
             //countDown.Text = "123";
             //countDown.Visible = true;
@@ -44,6 +45,11 @@ namespace MainProject
         public override void Draw(Graphics g)
         {
             g.DrawImage(img, x - img.Width / 2, y - img.Height / 2) ;
+        }
+
+        public override void resizelable(Label countdown)
+        {
+            countdown.Location = new Point(x - 12, y - 35);
         }
     }
 

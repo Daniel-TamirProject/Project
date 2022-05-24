@@ -32,6 +32,8 @@ namespace MainProject
             return (Image)(new Bitmap(imgToResize, size));
         }
         public override void Draw(Graphics g) { }
+        public override void resizelable(Label countdown)
+        { }
         ~Plant()
         {
             numberOfPlants--;

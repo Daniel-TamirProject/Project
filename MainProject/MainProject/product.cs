@@ -47,5 +47,7 @@ namespace MainProject
         public abstract Image resizeImage(Image imgToResize, Size size);
         public abstract bool IsInside(int xP, int yP);
         public abstract void Draw(Graphics g);
+
+        public abstract void resizelable(Label countdown);
     }
 }

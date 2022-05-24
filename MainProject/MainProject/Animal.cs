@@ -34,6 +34,8 @@ namespace MainProject
         public override void Draw(Graphics g)
         {
         }
+        public override void resizelable(Label countdown)
+        { }
         ~Animal()
         {
             numberOfAnimals--;
