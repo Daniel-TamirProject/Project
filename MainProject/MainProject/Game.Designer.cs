@@ -35,7 +35,6 @@ namespace MainProject
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.treePic = new System.Windows.Forms.PictureBox();
             this.adamaPic = new System.Windows.Forms.PictureBox();
-            this.shipPic = new System.Windows.Forms.PictureBox();
             this.ChickenPic = new System.Windows.Forms.PictureBox();
             this.CowPic = new System.Windows.Forms.PictureBox();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
@@ -49,10 +48,10 @@ namespace MainProject
             this.progressBar3 = new System.Windows.Forms.ProgressBar();
             this.label6 = new System.Windows.Forms.Label();
             this.progressBar4 = new System.Windows.Forms.ProgressBar();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.treePic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.adamaPic)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.shipPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChickenPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CowPic)).BeginInit();
             this.SuspendLayout();
@@ -90,8 +89,7 @@ namespace MainProject
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::MainProject.Properties.Resources.grassBackground2;
-            this.pictureBox1.Location = new System.Drawing.Point(0, -2);
+            this.pictureBox1.Location = new System.Drawing.Point(1, 1);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(700, 400);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -127,14 +125,6 @@ namespace MainProject
             this.adamaPic.TabIndex = 8;
             this.adamaPic.TabStop = false;
             this.adamaPic.Click += new System.EventHandler(this.adamaPic_Click);
-            // 
-            // shipPic
-            // 
-            this.shipPic.Location = new System.Drawing.Point(0, 0);
-            this.shipPic.Name = "shipPic";
-            this.shipPic.Size = new System.Drawing.Size(100, 50);
-            this.shipPic.TabIndex = 12;
-            this.shipPic.TabStop = false;
             // 
             // ChickenPic
             // 
@@ -260,6 +250,16 @@ namespace MainProject
             this.progressBar4.Size = new System.Drawing.Size(92, 23);
             this.progressBar4.TabIndex = 19;
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(713, 415);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 23;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -267,6 +267,7 @@ namespace MainProject
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.progressBar3);
             this.Controls.Add(this.label6);
@@ -278,21 +279,19 @@ namespace MainProject
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.progressBar1);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.treePic);
             this.Controls.Add(this.adamaPic);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.animal);
-            this.Controls.Add(this.shipPic);
             this.Controls.Add(this.ChickenPic);
             this.Controls.Add(this.CowPic);
             this.Controls.Add(this.animalCounter);
+            this.Controls.Add(this.pictureBox1);
             this.Name = "Game";
             this.Text = "Game";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.treePic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.adamaPic)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.shipPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChickenPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CowPic)).EndInit();
             this.ResumeLayout(false);
@@ -304,7 +303,6 @@ namespace MainProject
         private System.Windows.Forms.Label animalCounter;
         private System.Windows.Forms.PictureBox CowPic;
         private System.Windows.Forms.PictureBox ChickenPic;
-        private System.Windows.Forms.PictureBox shipPic;
         private System.Windows.Forms.Label animal;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox adamaPic;
@@ -321,5 +319,6 @@ namespace MainProject
         private System.Windows.Forms.ProgressBar progressBar3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ProgressBar progressBar4;
+        private System.Windows.Forms.Button button3;
     }
 }

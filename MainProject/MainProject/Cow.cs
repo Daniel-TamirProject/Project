@@ -25,6 +25,11 @@ namespace MainProject
             img = MainProject.Properties.Resources.cow2_removebg_preview1;
             img = resizeImage(img, new Size(65, 65));
             generationSpeed = 2;
+            countDown.Location = new Point(this.x / 2, (this.y / 2) + 20);
+
+            //countDown.Text = "123";
+            //countDown.Visible = true;
+            //countDown.BringToFront();
         }
 
         public override Image resizeImage(Image imgToResize, Size size)

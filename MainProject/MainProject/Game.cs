@@ -82,6 +82,7 @@ namespace MainProject
                         if (products[i].type == 2)
                             Plant.numberOfPlants--;
 
+                        pictureBox1.Controls.Remove(products[i].countDown);
                         products.Remove(products[i]);
                         animalCounter.Text = "Animals: " + Animal.numberOfAnimals;
                         plantCounter.Text = "Plants: " + Plant.numberOfPlants;
@@ -115,6 +116,7 @@ namespace MainProject
                 Product p = (Product)products[index];
                 p.x = e.X;
                 p.y = e.Y;
+                p.countDown.Location = new Point(p.x, p.y + 20);
                 pictureBox1.Invalidate();
             }
         }
@@ -134,11 +136,17 @@ namespace MainProject
             flag = 4;
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            progressBar1.PerformStep();
+        }
+
         private void pictureBox1_Paint(object sender, PaintEventArgs e)
         {
             for(int i=0;i<products.Count;i++)
             {
                 products[i].Draw(e.Graphics);
+                pictureBox1.Controls.Add(products[i].countDown);
             }
         }
     }
