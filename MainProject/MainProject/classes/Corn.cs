@@ -29,7 +29,7 @@ namespace MainProject.classes
             img = resizeImage(img, new Size(65, 65));
             generationSpeed = 3;
             //countDown.Location = new Point(x - 12, y - 50);
-            resizelable(countDown);
+            //resizelable(countDown);
         }
 
         public override Image resizeImage(Image imgToResize, Size size)

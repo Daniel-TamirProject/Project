@@ -23,10 +23,12 @@ namespace MainProject
         Product futureBorn;
 
         int flag = 1, index=-1;
+        int count = 10;
 
         public Game()
         {
             InitializeComponent();
+
         }
 
         Product getNewProduct(int flag,int x,int y)
@@ -88,7 +90,7 @@ namespace MainProject
                         if (products[i].type == 2)
                             Plant.numberOfPlants--;
 
-                        pictureBox1.Controls.Remove(products[i].countDown);
+                        //pictureBox1.Controls.Remove(products[i].countDown);
                         products.Remove(products[i]);
                         animalCounter.Text = "Animals: " + Animal.numberOfAnimals;
                         plantCounter.Text = "Plants: " + Plant.numberOfPlants;
@@ -107,7 +109,7 @@ namespace MainProject
                 {
                     futureBorn = getNewProduct(flag, e.X, e.Y);
                     products.Add(futureBorn);
-                    pictureBox1.Controls.Add(futureBorn.countDown);
+                    //pictureBox1.Controls.Add(futureBorn.countDown);
                     animalCounter.Text = "Animals: " + Animal.numberOfAnimals;
                     plantCounter.Text = "Plants: " + Plant.numberOfPlants;
                     pictureBox1.Invalidate();
@@ -124,8 +126,8 @@ namespace MainProject
                 p.x = e.X;
                 p.y = e.Y;
                 //p.countDown.Location = new Point(p.x - 12, p.y - 35);
-                p.resizelable(p.countDown);
-                p.countDown.BringToFront();
+                //p.resizelable(p.countDown);
+                //p.countDown.BringToFront();
                 
                 pictureBox1.Invalidate();
             }
@@ -153,29 +155,6 @@ namespace MainProject
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //Stream myStream;
-            //SaveFileDialog saveFileDialog1 = new SaveFileDialog();
-
-            //saveFileDialog1.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
-            //saveFileDialog1.FilterIndex = 2;
-            //saveFileDialog1.RestoreDirectory = true;
-
-            //if (saveFileDialog1.ShowDialog() == DialogResult.OK)
-            //{
-            //    if ((myStream = saveFileDialog1.OpenFile()) != null)
-            //    {
-            //        // Code to write the stream goes here.
-            //        IFormatter formatter = new BinaryFormatter();
-            //        using (Stream stream = new FileStream(saveFileDialog1.FileName, FileMode.Create, FileAccess.Write, FileShare.None))
-            //        {
-            //            //!!!!
-            //            formatter.Serialize(stream, products);
-            //        }
-            //        myStream.Close();
-            //    }
-            //}
-
-
             SaveFileDialog saveFileDialog1 = new SaveFileDialog();
             saveFileDialog1.InitialDirectory = @"Desktop";
             //saveFileDialog1.InitialDirectory = Directory.GetCurrentDirectory();// + "..\\myModels";
@@ -213,11 +192,26 @@ namespace MainProject
             }
         }
 
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
+            for (int i = 0; i < products.Count; i++)
+            {
+                products[i].count--;
+                if (products[i].count == -1) products[i].count = 10;
+                
+                products[i].countDown = products[i].count.ToString();
+            }
+
+            pictureBox1.Invalidate();
+        }
+
         private void pictureBox1_Paint(object sender, PaintEventArgs e)
         {
             for(int i=0;i<products.Count;i++)
             {
                 products[i].Draw(e.Graphics);
+                e.Graphics.DrawString(products[i].countDown, this.Font, Brushes.Black, new Point(products[i].x-5, products[i].y-30));
             }
         }
     }

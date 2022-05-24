@@ -26,7 +26,8 @@ namespace MainProject.classes
             img = MainProject.Properties.Resources.cow2_removebg_preview1;
             img = resizeImage(img, new Size(45, 45));
             generationSpeed = 2;
-            resizelable(countDown);
+            count = 10;
+            countDown = count.ToString();
             //countDown.Location = new Point(x - 12, y - 35);
             
             //countDown.Text = "123";
@@ -45,7 +46,10 @@ namespace MainProject.classes
         }
         public override void Draw(Graphics g)
         {
+            //Font = new Font(fontFamily,)
             g.DrawImage(img, x - img.Width / 2, y - img.Height / 2) ;
+            //g.DrawString(countDown, FontFamily., Brushes.Pink, new Point(x,y));
+
         }
 
         public override void resizelable(Label countdown)

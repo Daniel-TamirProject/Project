@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace MainProject.classes
 {
     [Serializable]
@@ -34,9 +35,12 @@ namespace MainProject.classes
         }
         public override void Draw(Graphics g)
         {
+           
         }
         public override void resizelable(Label countdown)
-        { }
+        { 
+            
+        }
         ~Animal()
         {
             numberOfAnimals--;
