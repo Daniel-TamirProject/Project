@@ -72,11 +72,15 @@ namespace MainProject
         {
             flag = 2;
         }
+        
 
         private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
         {
             index = -1;
-
+            if (new Point(e.X,e.Y) == RightBorder.Location)
+            {
+                return;
+            }
             for (int i = 0; i < products.Count; i++)
             {
                 if (products[i].IsInside(e.X, e.Y))
@@ -124,7 +128,12 @@ namespace MainProject
                 Product p = (Product)products[index];
                 p.x = e.X;
                 p.y = e.Y;
-                
+
+                if (new Point(p.x, p.y) == RightBorder.Location) 
+                {
+                    return;
+                }
+
                 pictureBox1.Invalidate();
             }
         }
@@ -275,12 +284,12 @@ namespace MainProject
             {
                 products[i].Draw(e.Graphics);
 
-                if(products[i].type==3) //Apple
+                if (products[i].type == 3) //Apple
                     e.Graphics.DrawString(products[i].countDown, this.Font, Brushes.Black, new Point(products[i].x - 5, products[i].y - 45));
-                else if(products[i].type == 4) // Corn
+                else if (products[i].type == 4) // Corn
                     e.Graphics.DrawString(products[i].countDown, this.Font, Brushes.Black, new Point(products[i].x - 5, products[i].y - 45));
                 else //Cow and Chickhen
-                    e.Graphics.DrawString(products[i].countDown, this.Font, Brushes.Black, new Point(products[i].x-5, products[i].y-35));
+                    e.Graphics.DrawString(products[i].countDown, this.Font, Brushes.Black, new Point(products[i].x - 5, products[i].y - 40));
             }
             coins.Text = coinCounter.ToString();
             animalCounter.Text = "Animals: " + Animal.numberOfAnimals;

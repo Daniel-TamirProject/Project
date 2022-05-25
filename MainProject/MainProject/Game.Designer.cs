@@ -53,12 +53,14 @@ namespace MainProject
             this.ChickenPic = new System.Windows.Forms.PictureBox();
             this.CowPic = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.RightBorder = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.treePic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cornPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChickenPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CowPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RightBorder)).BeginInit();
             this.SuspendLayout();
             // 
             // animalCounter
@@ -273,6 +275,7 @@ namespace MainProject
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(189)))), ((int)(((byte)(134)))));
             this.pictureBox1.Image = global::MainProject.Properties.Resources.backGround2;
             this.pictureBox1.Location = new System.Drawing.Point(1, 1);
             this.pictureBox1.Name = "pictureBox1";
@@ -285,13 +288,26 @@ namespace MainProject
             this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
             this.pictureBox1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseUp);
             // 
+            // RightBorder
+            // 
+            this.RightBorder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(189)))), ((int)(((byte)(134)))));
+            this.RightBorder.Image = global::MainProject.Properties.Resources.backGround2painter;
+            this.RightBorder.Location = new System.Drawing.Point(614, 1);
+            this.RightBorder.Name = "RightBorder";
+            this.RightBorder.Size = new System.Drawing.Size(96, 388);
+            this.RightBorder.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.RightBorder.TabIndex = 28;
+            this.RightBorder.TabStop = false;
+            // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(189)))), ((int)(((byte)(134)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(809, 459);
+            this.Controls.Add(this.RightBorder);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.cornBar);
             this.Controls.Add(this.appleBar);
             this.Controls.Add(this.eggsBar);
@@ -312,7 +328,6 @@ namespace MainProject
             this.Controls.Add(this.ChickenPic);
             this.Controls.Add(this.CowPic);
             this.Controls.Add(this.animalCounter);
-            this.Controls.Add(this.pictureBox1);
             this.Name = "Game";
             this.Text = "Game";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -321,6 +336,7 @@ namespace MainProject
             ((System.ComponentModel.ISupportInitialize)(this.ChickenPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CowPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RightBorder)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -349,5 +365,6 @@ namespace MainProject
         private System.Windows.Forms.Label coins;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox RightBorder;
     }
 }

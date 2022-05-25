@@ -127,5 +127,14 @@
   <ItemGroup>
     <None Include="Resources\Ding.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PartOfbackGround2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PartOfbackGround2 - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backGround2painter.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
