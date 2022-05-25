@@ -118,37 +118,34 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="tree-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tree-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cornField" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cornField.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="grass-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\grass-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="adama-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\adama-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="adama-removebg-preview1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\adama-removebg-preview1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="chicken2-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\chicken2-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="backGround2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\backGround2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cow2-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cow2-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="grassBackground2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\grassBackground2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="chicken2-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\chicken2-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="chicken2-removebg-preview1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\chicken2-removebg-preview1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="grass-removebg-preview1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\grass-removebg-preview1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="tree-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tree-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cow2-removebg-preview1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cow2-removebg-preview1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="backGround2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\backGround2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="appleTree" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\appleTree.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="coin_us_dollar_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\coin-us-dollar-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ding" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ding.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

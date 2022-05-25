@@ -12,6 +12,7 @@ using System.Runtime.InteropServices;
 using System.IO;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Media;
 using MainProject.classes;
 
 namespace MainProject
@@ -23,11 +24,12 @@ namespace MainProject
         Product futureBorn;
         int coinCounter = 0;
         int flag = 1, index=-1;
+        SoundPlayer ding = new SoundPlayer(MainProject.Properties.Resources.Ding);
+        
 
         public Game()
         {
             InitializeComponent();
-
         }
 
         Product getNewProduct(int flag,int x,int y)
@@ -243,6 +245,7 @@ namespace MainProject
         void addCoins()
         {
             coins.Text = coinCounter.ToString();
+            ding.Play();
         }
 
         private void pictureBox1_Paint(object sender, PaintEventArgs e)
@@ -250,7 +253,13 @@ namespace MainProject
             for(int i=0;i<products.Count;i++)
             {
                 products[i].Draw(e.Graphics);
-                e.Graphics.DrawString(products[i].countDown, this.Font, Brushes.Black, new Point(products[i].x-5, products[i].y-30));
+
+                if(products[i].type==3) //Apple
+                    e.Graphics.DrawString(products[i].countDown, this.Font, Brushes.Black, new Point(products[i].x - 5, products[i].y - 40));
+                else if(products[i].type == 4) // Corn
+                    e.Graphics.DrawString(products[i].countDown, this.Font, Brushes.Black, new Point(products[i].x - 5, products[i].y - 45));
+                else //Cow and Chickhen
+                    e.Graphics.DrawString(products[i].countDown, this.Font, Brushes.Black, new Point(products[i].x-5, products[i].y-30));
             }
         }
     }

@@ -17,17 +17,15 @@ namespace MainProject.classes
 
         public Corn() : base(4) // Kind = 2 = Corn
         {
-            img = MainProject.Properties.Resources.adama_removebg_preview1;
+            img = MainProject.Properties.Resources.cornField;
             img = resizeImage(img, new Size(65, 65));
-            generationSpeed = 3;
         }
         public Corn(int Cx, int Cy) : base(4) // Kind = 2 = Corn
         {
             x = Cx;
             y = Cy;
-            img = MainProject.Properties.Resources.adama_removebg_preview1;
+            img = MainProject.Properties.Resources.cornField;
             img = resizeImage(img, new Size(65, 65));
-            generationSpeed = 3;
         }
 
         public override Image resizeImage(Image imgToResize, Size size)

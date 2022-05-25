@@ -17,7 +17,6 @@ namespace MainProject.classes
         public int type;
         public Image img;
         public int x, y;
-        public int generationSpeed;
         public string countDown;
         public int count=10;
 
@@ -31,13 +30,11 @@ namespace MainProject.classes
             x = 0;
             y = 0;
             countDown = count.ToString();
-         
             type = typ;
          }
 
         public abstract Image resizeImage(Image imgToResize, Size size);
         public abstract bool IsInside(int xP, int yP);
         public abstract void Draw(Graphics g);
-
     }
 }

@@ -18,7 +18,6 @@ namespace MainProject.classes
         {
             img = MainProject.Properties.Resources.chicken2_removebg_preview1;
             img = resizeImage(img, new Size(30, 30));
-            generationSpeed = 4;
         }
 
         public Chicken(int Cx, int Cy) : base(2) // Breed = 2 = Chicken
@@ -27,7 +26,6 @@ namespace MainProject.classes
             y = Cy;
             img = MainProject.Properties.Resources.chicken2_removebg_preview1;
             img = resizeImage(img, new Size(30, 30));
-            generationSpeed = 4;
         }
 
         public override Image resizeImage(Image imgToResize, Size size)

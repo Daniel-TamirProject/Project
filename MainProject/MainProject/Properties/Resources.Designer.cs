@@ -63,19 +63,9 @@ namespace MainProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap adama_removebg_preview {
+        internal static System.Drawing.Bitmap appleTree {
             get {
-                object obj = ResourceManager.GetObject("adama-removebg-preview", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap adama_removebg_preview1 {
-            get {
-                object obj = ResourceManager.GetObject("adama-removebg-preview1", resourceCulture);
+                object obj = ResourceManager.GetObject("appleTree", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,6 +103,26 @@ namespace MainProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap coin_us_dollar_icon {
+            get {
+                object obj = ResourceManager.GetObject("coin_us_dollar_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cornField {
+            get {
+                object obj = ResourceManager.GetObject("cornField", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cow2_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("cow2-removebg-preview", resourceCulture);
@@ -131,32 +141,11 @@ namespace MainProject.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.Drawing.Bitmap grass_removebg_preview {
+        internal static System.IO.UnmanagedMemoryStream Ding {
             get {
-                object obj = ResourceManager.GetObject("grass-removebg-preview", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap grass_removebg_preview1 {
-            get {
-                object obj = ResourceManager.GetObject("grass-removebg-preview1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap grassBackground2 {
-            get {
-                object obj = ResourceManager.GetObject("grassBackground2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ResourceManager.GetStream("Ding", resourceCulture);
             }
         }
         
