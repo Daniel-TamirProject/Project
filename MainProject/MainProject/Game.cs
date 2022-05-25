@@ -77,14 +77,6 @@ namespace MainProject
         private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
         {
             index = -1;
-            if (new Point(e.X,e.Y) == RightBorder.Location)
-            {
-                return;
-            }
-            if (new Point(e.X,e.Y) == LeftBorder.Location)
-            {
-                return;
-            }
             for (int i = 0; i < products.Count; i++)
             {
                 if (products[i].IsInside(e.X, e.Y))
@@ -129,7 +121,7 @@ namespace MainProject
         {
             if (index >= 0)
             {
-                Product p = (Product)products[index];
+                Product p = products[index];
                 if (e.X > 600 || e.X < 0 || e.Y < 0 || e.Y > 400 || (e.X < 90 && e.Y > 240))
                     return;
                 p.x = e.X;

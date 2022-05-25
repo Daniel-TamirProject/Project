@@ -216,9 +216,9 @@ namespace MainProject
             // LeftBorder
             // 
             this.LeftBorder.Image = global::MainProject.Properties.Resources.backGround2crop2_0;
-            this.LeftBorder.Location = new System.Drawing.Point(2, 245);
+            this.LeftBorder.Location = new System.Drawing.Point(2, 257);
             this.LeftBorder.Name = "LeftBorder";
-            this.LeftBorder.Size = new System.Drawing.Size(88, 156);
+            this.LeftBorder.Size = new System.Drawing.Size(76, 144);
             this.LeftBorder.TabIndex = 29;
             this.LeftBorder.TabStop = false;
             // 
@@ -226,10 +226,9 @@ namespace MainProject
             // 
             this.RightBorder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(189)))), ((int)(((byte)(134)))));
             this.RightBorder.Image = global::MainProject.Properties.Resources.backGround2Crop;
-            this.RightBorder.Location = new System.Drawing.Point(615, 1);
+            this.RightBorder.Location = new System.Drawing.Point(622, 1);
             this.RightBorder.Name = "RightBorder";
-            this.RightBorder.Size = new System.Drawing.Size(96, 400);
-            this.RightBorder.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.RightBorder.Size = new System.Drawing.Size(88, 400);
             this.RightBorder.TabIndex = 28;
             this.RightBorder.TabStop = false;
             // 
