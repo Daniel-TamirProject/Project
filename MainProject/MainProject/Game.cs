@@ -216,26 +216,26 @@ namespace MainProject
 
             if(milkBar.Value == milkBar.Maximum)
             {
-                addCoins();
                 coinCounter += 10;
+                addCoins();
                 milkBar.Value = 0;
             }
             else if (eggsBar.Value == eggsBar.Maximum)
             {
-                addCoins();
                 coinCounter += 10;
+                addCoins();
                 eggsBar.Value = 0;
             }
             else if (appleBar.Value == appleBar.Maximum)
             {
-                addCoins();
                 coinCounter += 10;
+                addCoins();
                 appleBar.Value = 0;
             }
             else if (cornBar.Value == cornBar.Maximum)
             {
-                addCoins();
                 coinCounter += 10;
+                addCoins();
                 cornBar.Value = 0;
             }
 
