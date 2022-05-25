@@ -213,6 +213,11 @@ namespace MainProject
             }
         }
 
+        private void Game_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void pictureBox1_Paint(object sender, PaintEventArgs e)
         {
             for(int i=0;i<products.Count;i++)
