@@ -47,20 +47,20 @@ namespace MainProject
             this.appleBar = new System.Windows.Forms.ProgressBar();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.coins = new System.Windows.Forms.Label();
+            this.RightBorder = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.treePic = new System.Windows.Forms.PictureBox();
             this.cornPic = new System.Windows.Forms.PictureBox();
             this.ChickenPic = new System.Windows.Forms.PictureBox();
             this.CowPic = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.RightBorder = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.RightBorder)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.treePic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cornPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChickenPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CowPic)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RightBorder)).BeginInit();
             this.SuspendLayout();
             // 
             // animalCounter
@@ -211,6 +211,32 @@ namespace MainProject
             this.coins.TabIndex = 24;
             this.coins.Text = "0";
             // 
+            // RightBorder
+            // 
+            this.RightBorder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(189)))), ((int)(((byte)(134)))));
+            this.RightBorder.Image = global::MainProject.Properties.Resources.backGround2painter1;
+            this.RightBorder.Location = new System.Drawing.Point(615, 1);
+            this.RightBorder.Name = "RightBorder";
+            this.RightBorder.Size = new System.Drawing.Size(96, 388);
+            this.RightBorder.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.RightBorder.TabIndex = 28;
+            this.RightBorder.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(189)))), ((int)(((byte)(134)))));
+            this.pictureBox1.Image = global::MainProject.Properties.Resources.backGround2;
+            this.pictureBox1.Location = new System.Drawing.Point(1, 1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(710, 400);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox1_Paint);
+            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
+            this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
+            this.pictureBox1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseUp);
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
@@ -273,39 +299,13 @@ namespace MainProject
             this.CowPic.TabStop = false;
             this.CowPic.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(189)))), ((int)(((byte)(134)))));
-            this.pictureBox1.Image = global::MainProject.Properties.Resources.backGround2;
-            this.pictureBox1.Location = new System.Drawing.Point(1, 1);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(709, 400);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 10;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox1_Paint);
-            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
-            this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
-            this.pictureBox1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseUp);
-            // 
-            // RightBorder
-            // 
-            this.RightBorder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(189)))), ((int)(((byte)(134)))));
-            this.RightBorder.Image = global::MainProject.Properties.Resources.backGround2painter;
-            this.RightBorder.Location = new System.Drawing.Point(614, 1);
-            this.RightBorder.Name = "RightBorder";
-            this.RightBorder.Size = new System.Drawing.Size(96, 388);
-            this.RightBorder.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.RightBorder.TabIndex = 28;
-            this.RightBorder.TabStop = false;
-            // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(189)))), ((int)(((byte)(134)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(809, 459);
+            this.ClientSize = new System.Drawing.Size(801, 459);
             this.Controls.Add(this.RightBorder);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.cornBar);
@@ -330,13 +330,13 @@ namespace MainProject
             this.Controls.Add(this.animalCounter);
             this.Name = "Game";
             this.Text = "Game";
+            ((System.ComponentModel.ISupportInitialize)(this.RightBorder)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.treePic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cornPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChickenPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CowPic)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RightBorder)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

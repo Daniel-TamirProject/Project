@@ -126,6 +126,7 @@ namespace MainProject
             if (index >= 0)
             {
                 Product p = (Product)products[index];
+
                 p.x = e.X;
                 p.y = e.Y;
 
@@ -286,6 +287,7 @@ namespace MainProject
                 else //Cow and Chickhen
                     e.Graphics.DrawString(products[i].countDown, this.Font, Brushes.Black, new Point(products[i].x - 5, products[i].y - 40));
             }
+
             coins.Text = coinCounter.ToString();
             animalCounter.Text = "Animals: " + Animal.numberOfAnimals;
             plantCounter.Text = "Plants: " + Plant.numberOfPlants;
