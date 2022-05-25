@@ -129,11 +129,6 @@ namespace MainProject
                 p.x = e.X;
                 p.y = e.Y;
 
-                if (new Point(p.x, p.y) == RightBorder.Location) 
-                {
-                    return;
-                }
-
                 pictureBox1.Invalidate();
             }
         }
