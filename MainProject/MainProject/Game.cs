@@ -276,11 +276,11 @@ namespace MainProject
                 products[i].Draw(e.Graphics);
 
                 if(products[i].type==3) //Apple
-                    e.Graphics.DrawString(products[i].countDown, this.Font, Brushes.Black, new Point(products[i].x - 5, products[i].y - 40));
+                    e.Graphics.DrawString(products[i].countDown, this.Font, Brushes.Black, new Point(products[i].x - 5, products[i].y - 45));
                 else if(products[i].type == 4) // Corn
                     e.Graphics.DrawString(products[i].countDown, this.Font, Brushes.Black, new Point(products[i].x - 5, products[i].y - 45));
                 else //Cow and Chickhen
-                    e.Graphics.DrawString(products[i].countDown, this.Font, Brushes.Black, new Point(products[i].x-5, products[i].y-30));
+                    e.Graphics.DrawString(products[i].countDown, this.Font, Brushes.Black, new Point(products[i].x-5, products[i].y-35));
             }
             coins.Text = coinCounter.ToString();
             animalCounter.Text = "Animals: " + Animal.numberOfAnimals;
