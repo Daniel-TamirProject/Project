@@ -334,7 +334,6 @@ namespace MainProject
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox cornPic;
         private System.Windows.Forms.PictureBox treePic;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ProgressBar milkBar;
         private System.Windows.Forms.Button Savebtn;
         private System.Windows.Forms.Button Loadbtn;
@@ -349,5 +348,6 @@ namespace MainProject
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label coins;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

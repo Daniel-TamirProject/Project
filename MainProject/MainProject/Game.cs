@@ -160,6 +160,10 @@ namespace MainProject
                     BinaryFormatter bin = new BinaryFormatter();
                     bin.Serialize(stream, products);
                     bin.Serialize(stream, coinCounter);
+                    bin.Serialize(stream, milkBar.Value);
+                    bin.Serialize(stream, eggsBar.Value);
+                    bin.Serialize(stream, cornBar.Value);
+                    bin.Serialize(stream, appleBar.Value);
                 }
             }
         }
@@ -177,6 +181,10 @@ namespace MainProject
                 var binaryFormatter = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
                 products = (List<Product>)binaryFormatter.Deserialize(stream);
                 coinCounter = (int)binaryFormatter.Deserialize(stream);
+                milkBar.Value = (int)binaryFormatter.Deserialize(stream);
+                eggsBar.Value = (int)binaryFormatter.Deserialize(stream);
+                cornBar.Value = (int)binaryFormatter.Deserialize(stream);
+                appleBar.Value = (int)binaryFormatter.Deserialize(stream);
                 pictureBox1.Invalidate();
             }
         }
