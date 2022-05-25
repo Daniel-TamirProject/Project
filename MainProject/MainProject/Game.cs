@@ -126,7 +126,8 @@ namespace MainProject
             if (index >= 0)
             {
                 Product p = (Product)products[index];
-
+                if (e.X > 600 || e.X < 0 || e.Y < 0 || e.Y > 400 || (e.X < 90 && e.Y > 240))
+                    return;
                 p.x = e.X;
                 p.y = e.Y;
 
