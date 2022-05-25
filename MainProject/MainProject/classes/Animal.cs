@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace MainProject.classes
 {
     [Serializable]
@@ -19,7 +20,7 @@ namespace MainProject.classes
         {
             breed = 0;
         }
-        public Animal(int bre) : base(1)
+        public Animal(int bre) : base(bre)
         {
             breed = bre;
             numberOfAnimals++;
@@ -33,10 +34,9 @@ namespace MainProject.classes
             return (Image)(new Bitmap(imgToResize, size));
         }
         public override void Draw(Graphics g)
-        {
+        {    
         }
-        public override void resizelable(Label countdown)
-        { }
+        
         ~Animal()
         {
             numberOfAnimals--;

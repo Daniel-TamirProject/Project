@@ -19,7 +19,7 @@ namespace MainProject.classes
         {
             kind = 0;
         }
-        public Plant(int knd) : base(2)
+        public Plant(int knd) : base(knd)
         {
             kind = knd;
             numberOfPlants++;
@@ -33,8 +33,6 @@ namespace MainProject.classes
             return (Image)(new Bitmap(imgToResize, size));
         }
         public override void Draw(Graphics g) { }
-        public override void resizelable(Label countdown)
-        { }
         ~Plant()
         {
             numberOfPlants--;

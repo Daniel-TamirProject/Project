@@ -17,7 +17,6 @@ namespace MainProject.classes
         {
             img = MainProject.Properties.Resources.cow2_removebg_preview1;
             img = resizeImage(img, new Size(45, 45));
-            generationSpeed = 2;
         }
         public Cow(int Cx,int Cy) : base(1) // Breed = 1 = Cow
         {          
@@ -25,13 +24,6 @@ namespace MainProject.classes
             y = Cy;
             img = MainProject.Properties.Resources.cow2_removebg_preview1;
             img = resizeImage(img, new Size(45, 45));
-            generationSpeed = 2;
-            resizelable(countDown);
-            //countDown.Location = new Point(x - 12, y - 35);
-            
-            //countDown.Text = "123";
-            //countDown.Visible = true;
-            //countDown.BringToFront();
         }
 
         public override Image resizeImage(Image imgToResize, Size size)
@@ -46,11 +38,6 @@ namespace MainProject.classes
         public override void Draw(Graphics g)
         {
             g.DrawImage(img, x - img.Width / 2, y - img.Height / 2) ;
-        }
-
-        public override void resizelable(Label countdown)
-        {
-            countdown.Location = new Point(x - 12, y - 35);
         }
     }
 

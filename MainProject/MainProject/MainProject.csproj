@@ -68,11 +68,6 @@
     <Compile Include="classes\Product.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -88,6 +83,11 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -98,28 +98,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\grassBackground2.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\cow2-removebg-preview.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\duck-removebg-preview.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ship-removebg-preview.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\adama-removebg-preview.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\adama-removebg-preview1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\grass-removebg-preview.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\grass-removebg-preview1.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\tree-removebg-preview.png" />
@@ -131,13 +110,22 @@
     <None Include="Resources\cow2-removebg-preview1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\ship-removebg-preview1.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\chicken2-removebg-preview1.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\backGround2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cornField.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coin-us-dollar-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appleTree.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ding.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -10,8 +10,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.IO;
-using System.Runtime.Serialization;//!!!!!!
+using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Media;
 using MainProject.classes;
 
 namespace MainProject
@@ -19,10 +20,12 @@ namespace MainProject
     [Serializable]
     public partial class Game : Form
     {
-       public List<Product> products = new List<Product>();
+        public List<Product> products = new List<Product>();
         Product futureBorn;
-
+        int coinCounter = 0;
         int flag = 1, index=-1;
+        SoundPlayer ding = new SoundPlayer(MainProject.Properties.Resources.Ding);
+        
 
         public Game()
         {
@@ -88,7 +91,6 @@ namespace MainProject
                         if (products[i].type == 2)
                             Plant.numberOfPlants--;
 
-                        pictureBox1.Controls.Remove(products[i].countDown);
                         products.Remove(products[i]);
                         animalCounter.Text = "Animals: " + Animal.numberOfAnimals;
                         plantCounter.Text = "Plants: " + Plant.numberOfPlants;
@@ -107,7 +109,6 @@ namespace MainProject
                 {
                     futureBorn = getNewProduct(flag, e.X, e.Y);
                     products.Add(futureBorn);
-                    pictureBox1.Controls.Add(futureBorn.countDown);
                     animalCounter.Text = "Animals: " + Animal.numberOfAnimals;
                     plantCounter.Text = "Plants: " + Plant.numberOfPlants;
                     pictureBox1.Invalidate();
@@ -123,9 +124,6 @@ namespace MainProject
                 Product p = (Product)products[index];
                 p.x = e.X;
                 p.y = e.Y;
-                //p.countDown.Location = new Point(p.x - 12, p.y - 35);
-                p.resizelable(p.countDown);
-                p.countDown.BringToFront();
                 
                 pictureBox1.Invalidate();
             }
@@ -141,46 +139,17 @@ namespace MainProject
             flag = 3;
         }
 
-        private void adamaPic_Click(object sender, EventArgs e)
+        private void cornPic_Click_1(object sender, EventArgs e)
         {
             flag = 4;
-        }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            progressBar1.PerformStep();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //Stream myStream;
-            //SaveFileDialog saveFileDialog1 = new SaveFileDialog();
-
-            //saveFileDialog1.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
-            //saveFileDialog1.FilterIndex = 2;
-            //saveFileDialog1.RestoreDirectory = true;
-
-            //if (saveFileDialog1.ShowDialog() == DialogResult.OK)
-            //{
-            //    if ((myStream = saveFileDialog1.OpenFile()) != null)
-            //    {
-            //        // Code to write the stream goes here.
-            //        IFormatter formatter = new BinaryFormatter();
-            //        using (Stream stream = new FileStream(saveFileDialog1.FileName, FileMode.Create, FileAccess.Write, FileShare.None))
-            //        {
-            //            //!!!!
-            //            formatter.Serialize(stream, products);
-            //        }
-            //        myStream.Close();
-            //    }
-            //}
-
-
             SaveFileDialog saveFileDialog1 = new SaveFileDialog();
-            saveFileDialog1.InitialDirectory = @"Desktop";
-            //saveFileDialog1.InitialDirectory = Directory.GetCurrentDirectory();// + "..\\myModels";
+            saveFileDialog1.InitialDirectory = Directory.GetCurrentDirectory(); ;
             saveFileDialog1.Filter = "model files (*.mdl)|*.mdl|All files (*.*)|*.*";
-            //saveFileDialog1.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
             saveFileDialog1.FilterIndex = 1;
             saveFileDialog1.RestoreDirectory = true;
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
@@ -188,10 +157,8 @@ namespace MainProject
                 IFormatter formatter = new BinaryFormatter();
                 using (Stream stream = new FileStream(saveFileDialog1.FileName, FileMode.Create, FileAccess.Write, FileShare.None))
                 {
-                    //!!!!
                     BinaryFormatter bin = new BinaryFormatter();
                     bin.Serialize(stream, products);
-                    //formatter.Serialize(stream, products);
                 }
             }
         }
@@ -199,7 +166,7 @@ namespace MainProject
         private void Loadbtn_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
-            openFileDialog1.InitialDirectory = Directory.GetCurrentDirectory();// + "..\\myModels";
+            openFileDialog1.InitialDirectory = Directory.GetCurrentDirectory();
             openFileDialog1.Filter = "model files (*.mdl)|*.mdl|All files (*.*)|*.*";
             openFileDialog1.FilterIndex = 2;
             openFileDialog1.RestoreDirectory = true;
@@ -207,15 +174,78 @@ namespace MainProject
             {
                 Stream stream = File.Open(openFileDialog1.FileName, FileMode.Open);
                 var binaryFormatter = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
-                //!!!!
                 products = (List<Product>)binaryFormatter.Deserialize(stream);
                 pictureBox1.Invalidate();
             }
         }
 
-        private void Game_Load(object sender, EventArgs e)
+        private void timer1_Tick(object sender, EventArgs e)
         {
+            for (int i = 0; i < products.Count; i++)
+            {
+                products[i].count--;
 
+                if (products[i].count < 0)
+                {
+                    switch (products[i].type)
+                    {
+                        case 1:
+                            milkBar.PerformStep();
+                            break;
+
+                        case 2:
+                            eggsBar.PerformStep();
+                            break;
+
+                        case 3:
+                            appleBar.PerformStep();
+                            break;
+
+                        case 4:
+                            cornBar.PerformStep();
+                            break;
+
+                        default:
+                            break;
+                    }
+                    products[i].count = 10;
+                }
+                
+                products[i].countDown = products[i].count.ToString();
+            }
+
+            if(milkBar.Value == milkBar.Maximum)
+            {
+                addCoins();
+                coinCounter += 10;
+                milkBar.Value = 0;
+            }
+            else if (eggsBar.Value == eggsBar.Maximum)
+            {
+                addCoins();
+                coinCounter += 10;
+                eggsBar.Value = 0;
+            }
+            else if (appleBar.Value == appleBar.Maximum)
+            {
+                addCoins();
+                coinCounter += 10;
+                appleBar.Value = 0;
+            }
+            else if (cornBar.Value == cornBar.Maximum)
+            {
+                addCoins();
+                coinCounter += 10;
+                cornBar.Value = 0;
+            }
+
+
+            pictureBox1.Invalidate();
+        }
+        void addCoins()
+        {
+            coins.Text = coinCounter.ToString();
+            ding.Play();
         }
 
         private void pictureBox1_Paint(object sender, PaintEventArgs e)
@@ -223,6 +253,13 @@ namespace MainProject
             for(int i=0;i<products.Count;i++)
             {
                 products[i].Draw(e.Graphics);
+
+                if(products[i].type==3) //Apple
+                    e.Graphics.DrawString(products[i].countDown, this.Font, Brushes.Black, new Point(products[i].x - 5, products[i].y - 40));
+                else if(products[i].type == 4) // Corn
+                    e.Graphics.DrawString(products[i].countDown, this.Font, Brushes.Black, new Point(products[i].x - 5, products[i].y - 45));
+                else //Cow and Chickhen
+                    e.Graphics.DrawString(products[i].countDown, this.Font, Brushes.Black, new Point(products[i].x-5, products[i].y-30));
             }
         }
     }
