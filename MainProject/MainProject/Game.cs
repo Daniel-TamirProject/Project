@@ -81,6 +81,10 @@ namespace MainProject
             {
                 return;
             }
+            if (new Point(e.X,e.Y) == LeftBorder.Location)
+            {
+                return;
+            }
             for (int i = 0; i < products.Count; i++)
             {
                 if (products[i].IsInside(e.X, e.Y))

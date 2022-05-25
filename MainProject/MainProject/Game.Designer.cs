@@ -47,6 +47,7 @@ namespace MainProject
             this.appleBar = new System.Windows.Forms.ProgressBar();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.coins = new System.Windows.Forms.Label();
+            this.LeftBorder = new System.Windows.Forms.PictureBox();
             this.RightBorder = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -54,6 +55,7 @@ namespace MainProject
             this.cornPic = new System.Windows.Forms.PictureBox();
             this.ChickenPic = new System.Windows.Forms.PictureBox();
             this.CowPic = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.LeftBorder)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RightBorder)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -211,13 +213,22 @@ namespace MainProject
             this.coins.TabIndex = 24;
             this.coins.Text = "0";
             // 
+            // LeftBorder
+            // 
+            this.LeftBorder.Image = global::MainProject.Properties.Resources.backGround2crop2_0;
+            this.LeftBorder.Location = new System.Drawing.Point(2, 245);
+            this.LeftBorder.Name = "LeftBorder";
+            this.LeftBorder.Size = new System.Drawing.Size(88, 156);
+            this.LeftBorder.TabIndex = 29;
+            this.LeftBorder.TabStop = false;
+            // 
             // RightBorder
             // 
             this.RightBorder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(189)))), ((int)(((byte)(134)))));
-            this.RightBorder.Image = global::MainProject.Properties.Resources.backGround2painter1;
+            this.RightBorder.Image = global::MainProject.Properties.Resources.backGround2Crop;
             this.RightBorder.Location = new System.Drawing.Point(615, 1);
             this.RightBorder.Name = "RightBorder";
-            this.RightBorder.Size = new System.Drawing.Size(96, 388);
+            this.RightBorder.Size = new System.Drawing.Size(96, 400);
             this.RightBorder.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.RightBorder.TabIndex = 28;
             this.RightBorder.TabStop = false;
@@ -306,6 +317,7 @@ namespace MainProject
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(149)))), ((int)(((byte)(189)))), ((int)(((byte)(134)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(801, 459);
+            this.Controls.Add(this.LeftBorder);
             this.Controls.Add(this.RightBorder);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.cornBar);
@@ -330,6 +342,7 @@ namespace MainProject
             this.Controls.Add(this.animalCounter);
             this.Name = "Game";
             this.Text = "Game";
+            ((System.ComponentModel.ISupportInitialize)(this.LeftBorder)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RightBorder)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -366,5 +379,6 @@ namespace MainProject
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox RightBorder;
+        private System.Windows.Forms.PictureBox LeftBorder;
     }
 }

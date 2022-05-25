@@ -83,6 +83,36 @@ namespace MainProject.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap backGround2Crop {
+            get {
+                object obj = ResourceManager.GetObject("backGround2Crop", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap backGround2crop2 {
+            get {
+                object obj = ResourceManager.GetObject("backGround2crop2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap backGround2crop2_0 {
+            get {
+                object obj = ResourceManager.GetObject("backGround2crop2.0", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap backGround2painter {
             get {
                 object obj = ResourceManager.GetObject("backGround2painter", resourceCulture);

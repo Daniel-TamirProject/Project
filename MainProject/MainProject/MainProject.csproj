@@ -139,5 +139,14 @@
   <ItemGroup>
     <None Include="Resources\backGround2painter1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backGround2Crop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backGround2crop2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backGround2crop2.0.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
