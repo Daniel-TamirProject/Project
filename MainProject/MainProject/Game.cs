@@ -159,6 +159,7 @@ namespace MainProject
                 {
                     BinaryFormatter bin = new BinaryFormatter();
                     bin.Serialize(stream, products);
+                    bin.Serialize(stream, coinCounter);
                 }
             }
         }
@@ -175,6 +176,7 @@ namespace MainProject
                 Stream stream = File.Open(openFileDialog1.FileName, FileMode.Open);
                 var binaryFormatter = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
                 products = (List<Product>)binaryFormatter.Deserialize(stream);
+                coinCounter = (int)binaryFormatter.Deserialize(stream);
                 pictureBox1.Invalidate();
             }
         }
@@ -261,6 +263,7 @@ namespace MainProject
                 else //Cow and Chickhen
                     e.Graphics.DrawString(products[i].countDown, this.Font, Brushes.Black, new Point(products[i].x-5, products[i].y-30));
             }
+            coins.Text = coinCounter.ToString();
         }
     }
 }
