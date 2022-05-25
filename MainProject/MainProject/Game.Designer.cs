@@ -202,7 +202,7 @@ namespace MainProject
             // 
             this.coins.AutoSize = true;
             this.coins.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold);
-            this.coins.Location = new System.Drawing.Point(392, 415);
+            this.coins.Location = new System.Drawing.Point(402, 418);
             this.coins.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.coins.Name = "coins";
             this.coins.Size = new System.Drawing.Size(22, 29);
@@ -212,7 +212,7 @@ namespace MainProject
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(355, 412);
+            this.pictureBox2.Location = new System.Drawing.Point(365, 412);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(32, 32);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
