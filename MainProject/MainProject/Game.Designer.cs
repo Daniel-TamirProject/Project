@@ -216,7 +216,7 @@ namespace MainProject
             // LeftBorder
             // 
             this.LeftBorder.Image = global::MainProject.Properties.Resources.backGround2crop2_0;
-            this.LeftBorder.Location = new System.Drawing.Point(2, 245);
+            this.LeftBorder.Location = new System.Drawing.Point(2, 247);
             this.LeftBorder.Name = "LeftBorder";
             this.LeftBorder.Size = new System.Drawing.Size(88, 156);
             this.LeftBorder.TabIndex = 29;
